@@ -5,8 +5,8 @@ const help = (prefix) => {
 ▋┋ ☠️ 𝕾 𝖎 𝖆 𝖗 𝖆 𝕭 𝖔 𝖙 ☠️
 ▋┋
 ▋┋ Hola por favor registrarte con:
-▋┋ !daftar  y tu nombre
-▋┋ !reg y tu nombre
+▋┋ /daftar  y tu nombre
+▋┋ /reg y tu nombre
 ▋┋ Comando: ⌜ ${prefix} ⌟
 ▋┋
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
@@ -97,7 +97,7 @@ const help = (prefix) => {
 ▋┋ *Ver los chats del bot*
 ▋┋ ${prefix}grupos
 ▋┋
-▋┋ ☠️D r e v i l l☠️
+▋┋ ☠️D a r☠️
 ▋▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 `
 }
