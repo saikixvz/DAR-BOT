@@ -1,5 +1,5 @@
 /*
-* © 2021 Drevill, INC.
+* © 2021 Darlyn, INC.
 */
 
 const {
@@ -239,7 +239,7 @@ async function starts() {
 		start('2', 'Estas desconectado')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado by drevill')
+		success('2', 'Conectado by darlyn')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -257,14 +257,14 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i.ibb.co/2ZHZCH4/bienvenida-Siarabotby-Drevill.jpg'
 				}
-				teks = ` ┌──┨ ☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️ ┠──\n`
+				teks = ` ┌──┨ ☠ Dar-Bot☠┠──\n`
 				teks += `▢ ${mdata.subject}\n`
 				teks += `▢ BIENVENIDO(A)\n`
 				teks += `▢ @${num.split('@')[0]}\n`
 				teks += `▢ Presentate Con:\n`
 				teks += `▢Foto ▢Nombre ▢Edad ▢País\n`
 				teks += `▢ Respeta las reglas\n`
-				teks += `└──┨ ☠️Drevill☠️ ┠──\n`
+				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -285,11 +285,11 @@ client.on('group-participants-update', async (anu) => {
 					ppimg = 'https://i.ibb.co/2ZHZCH4/bienvenida-Siarabotby-Drevill.jpg'
 				}
 				teks = `≡ *NUEVO ADMIN*
-┌───┨ ☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️ ┠────
+┌───┨ ☠Dar-Bot☠ ┠────
 ▢ *Nombre* : @${num.split('@')[0]}
 ▢ *Número* : ${num.replace('@s.whatsapp.net', '')}
 ▢ *Mensaje* : Felicidades  Admin. 🎉
-└────┨ ☠️Drevill☠️ ┠────`
+└────┨ ☠️Dar☠️ ┠────`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				} else if (anu.action == 'demote') {
@@ -300,11 +300,11 @@ client.on('group-participants-update', async (anu) => {
 					ppimg = 'https://i.ibb.co/2ZHZCH4/bienvenida-Siarabotby-Drevill.jpg'
 				}
 				teks = `≡ *ADMIN DEGRADADO*
-┌───┨ ☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️ ┠────
+┌───┨ ☠𝖙Dar-Bot☠ ┠────
 ▢ *Nombre* : @${num.split('@')[0]}
 ▢ *Número* : ${num.replace('@s.whatsapp.net', '')}
 ▢ *Mensaje* : Lo siento
-└────┨ ☠️Drevill☠️ ┠────`
+└────┨ ☠️Dar☠️ ┠────`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})	
 			}
@@ -731,7 +731,7 @@ pru += `@${_.split('@')[0]}\n`
 }
 ban.push(`${mentioned}`)
 fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
-susp = `『 BANEADO 🚫 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n◉Razon: Spam\n\n*Usted a sido baneado del uso del bot, no podra usar el bot hasta nuevo aviso*`
+susp = `『 BANEADO 🚫 』\n\n◉Nombre: @${mentioned[0].split('@')[0]}\n◉Razon: Por mamaguevazo\n\n*Usted a sido baneado del uso del bot, no podra usar el bot hasta nuevo aviso*`
 mentions(`${susp}`, mentioned, true)   
 break
 
@@ -862,7 +862,7 @@ ${a}
 ┃ ├──────────┤ ┃
 ${m}
 ╿ └──────────┘ ╿
-╰──┨⃞ Drevill┠───╯`
+╰──┨⃞ Dar┠───╯`
 reply(`${u}`)
 break
 					
@@ -909,8 +909,8 @@ break
 		
 	
 				case 'owner':
-					client.sendMessage(from, { displayname: "Drevill 🥸", vcard: vcard }, MessageType.contact, { quoted: mek })
-					client.sendMessage(from, 'Mi creador Drevill ahora esta ocupado', MessageType.text, { quoted: mek })
+					client.sendMessage(from, { displayname: "Darlyn 🥸", vcard: vcard }, MessageType.contact, { quoted: mek })
+					client.sendMessage(from, 'Darlyn se esta masturbando, por favor, hablale mas tarde, MessageType.text, { quoted: mek })
 					break
 	
 	
@@ -1018,6 +1018,7 @@ break
 					mentions(teks, groupAdmins, true)
 					break
 			case 'setprefix':
+				case 'prefijo':
 					client.updatePresence(from, Presence.composing) 
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -1201,7 +1202,7 @@ break
 						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
 						reply('❬ ✅ ❭ La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break 
 				
@@ -1223,7 +1224,7 @@ break
 						fs.writeFileSync('./src/antiface.json', JSON.stringify(antiface))
 						reply('❬ ✅ ❭ La funcion de antilink de Facebook esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				        
@@ -1265,6 +1266,19 @@ client.sendMessage(from, 'NOS VEMOS GILES ', text) // ur cods
 }, 0)
 break
        
+case 'exe':
+case 'bye':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+setTimeout( () => {
+client.groupLeave (from) 
+}, 2000)
+setTimeout( () => {
+client.updatePresence(from, Presence.composing) 
+client.sendMessage(from, 'NOS VEMOS MAMAGUEVAZOS', text) // ur cods
+}, 0)
+break
+					
 case 'grupocr':
 client.updatePresence(from, Presence.composing) 
 options = {
@@ -1280,8 +1294,7 @@ break
 					case 'alv':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (!isOwner) return reply(mess.only.ownerB)
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
@@ -1366,7 +1379,7 @@ break
                 
 case 'open':                
 case'abrir':
-					client.updatePresence(from, Presence.composing)
+client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1394,6 +1407,7 @@ reply('No se pudo agregar el destino, tal vez porque es privado')
 break
 				
 case 'fotog': 
+				case 'fgc':
 reply(mess.foto)
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1404,6 +1418,7 @@ reply('*⌊✅⌉ El cambio de foto del grupo fue exitoso*')
 break						
 				
 case 'name':
+				case 'ngc':
       if (!isGroup) return reply(mess.only.group)
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1476,7 +1491,8 @@ break
 				case 's':
 				case 'tucson':
 				case 'opa':
-			 	case 'siara':
+			 	case 'dar':
+				case 'sofi':
 				case 'nefasto':
 				case 'stiker':
 				case 'sticker':
@@ -1573,7 +1589,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby drevill'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby darlyn'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -1599,13 +1615,13 @@ break
 				
 				
 	        case 'play':   
-	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: !play Goteo - Duki')
+	        if (args.length < 1) return reply('Donde esta el nombre de la canción?\n\nEjemplo: /play Goteo - Duki')
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton50`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10hamilton`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*「Cancion Encontrada ✅」*\n📌 *Título:* ${anu.result.title}\n🔗 *Fuente:* ${anu.result.source}\n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n by drevill`
+                infomp3 = `*「Cancion Encontrada ✅」*\n📌 *Título:* ${anu.result.title}\n🔗 *Fuente:* ${anu.result.source}\n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n by darlyn`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1617,9 +1633,9 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
 	        reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy50`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10hamilton`)
                 if (anu.error) return reply(anu.error)
-                infomp3 = `*「Cancion Encontrada ✅」*\n📌 *Título:* ${anu.result.title}\n🔗 *Fuente:* ${anu.result.source}\n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n by drevill`
+                infomp3 = `*「Cancion Encontrada ✅」*\n📌 *Título:* ${anu.result.title}\n🔗 *Fuente:* ${anu.result.source}\n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*\n\n by Darlyn`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
@@ -1633,7 +1649,7 @@ break
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error.yt)
-		teks = `*「VIDEO ENCONTRADO ✅」*\n📌 *Título:* ${anu.result.title} \n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n by drevill`
+		teks = `*「VIDEO ENCONTRADO ✅」*\n📌 *Título:* ${anu.result.title} \n📟 *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n by darlyn`
 		lagu = await getBuffer(anu.result.thumbnail)
                 client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
 		buffer = await getBuffer(anu.result.url_video)
@@ -1646,7 +1662,9 @@ break
 //REGISTRO				
 
 case 'daftar':
-case 'reg':					             
+case 'reg':
+				case 'rg':
+				case 'verify':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
 if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar drevill`)
@@ -1654,7 +1672,7 @@ var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, ` 」*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️*──\n\n Registro completo usa ${prefix}help para ver el Menu`, text, {quoted: mek})
+client.sendMessage(from, ` 「*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️*──\n\n Registro completo usa ${prefix}help para ver el Menu`, text, {quoted: mek})
 break 
 									
 //FIN DE REGISTRO  
