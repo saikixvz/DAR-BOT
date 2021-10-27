@@ -461,6 +461,293 @@ if (budy.includes("https://wa.me/")){
 			
 //FIN DE LINKS DE WHATSAPP	
 			
+case 'inspeccionar':
+if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply('*Este no es un link de WhatsApp...*')
+if (!q) return reply('*🙄Y el link??...*')
+sp = args[0]
+jids = []
+var net = sp.split('https://chat.whatsapp.com/')[1]
+if (!net) return reply('Porfavor aegurate que el link sea de un grupo de whatsapp: *https://whatsapp.com/....*')
+var { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await samu330.query({ 
+json: ["query", "invite", net],
+expect200:true })
+let insSm = `_*Inspección by Dar*_
+*Id* : _${id}_
+Creador del grupo:* ${owner ? `Owner : @${owner.split('@')[0]}` : 'Owner : -'}
+*° Nombre del Grupo:* _${subject}_
+*° Fecha de creacion:* ${Date(creation * 1000)}
+*° Total de Miembros:* ${size}
+${desc ? `*Descripcion:* ${desc}` : 'Desc : Sin descripcion'}
+*° Id de la Descripcion:* ${descId}
+${descOwner ? `° Descripcion cambiada por @${descOwner.split('@')[0]}` : 'Descripcion cambiada por : -'}\n\n*Fecha* : ${descTime ? `${Date(descTime * 1000)}` : '-'}\n\n*° Contactos agendados*\n`
+for ( let y of participants) {
+insSm += `> @${y.id.split('@')[0]}\n*Admin* : ${y.isAdmin ? 'Si' : 'No'}\n`
+jids.push(`${y.id.replace(/@c.us/g,'@s.whatsapp.net')}`)
+}
+jids.push(`${owner ? `${owner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+jids.push(`${descOwner ? `${descOwner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+samu330.sendMessage(from, insSm, MessageType.text, {quoted: fliveLoc})
+break
+
+case 'takestick':
+case 'robar':
+if (!isUser) return reply(mess.only.daftarB)
+if (!isQuotedSticker) return reply(`Etiqueta un stiquer y escribe: *${prefix}takestick nombre|autor*`)
+const encmediats = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var kls = q
+var pack = kls.split("|")[0];
+var author2 = kls.split("|")[1];
+if (!q) return reply('*Y el nombre de autor y paquete?*')
+if (!pack) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
+if (!author2) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
+const dlfile = await samu330.downloadMediaMessage(encmediats)
+reply(mess.wait)
+const bas64 = `data:image/jpeg;base64,${dlfile.toString('base64')}`
+var mantap = await convertSticker(bas64, `${author2}`, `${pack}`)
+var imageBuffer = new Buffer.from(mantap, 'base64');
+samu330.sendMessage(from, imageBuffer, sticker, {quoted: sam})
+addFilter(from)
+break
+					
+case 'clima':
+if (!isUser) return reply(mess.only.daftarB)
+if (!q) return reply('*Y el lugar del que quieres ver el clima?*')
+clima = `https://api.apiflash.com/v1/urltoimage?access_key=57fcd6384cff4e529b9ca76089f05992&url=https://pt.wttr.in/${q}`
+sendFileFromUrl(clima, image, {quoted: fimg})
+break
+
+case 'timer':
+if (!isUser) return reply(mess.only.daftarB)
+if (args[1] == "segundos") {
+var timer = args[0] + "000"
+} else if (args[1] == "minutos") {
+var timer = args[0] + "0000"
+} else if (args[1] == "horas") {
+var timer = args[0] + "00000"
+} else {
+return reply("Porfavor eliga entre: \nsegundos\nminutos\nhoras\n\nEjemplo: =timer 30 segundos")
+}
+addFilter(from)
+reply(`*⏰Se ajusto su cronometro a ${q}*`)
+setTimeout(() => {
+reply(`⏰El tiempo de *${q}* a finalizado!`)
+}, timer)
+addFilter(from)
+break
+				
+case 'blackpink':
+if (!q) return reply('*Y el texto para crear el logo donde esta?*')
+reply(`*Porfavor espera un momento, tu logo ${command} esta siendo creado con el texto ${q}!*`)		
+logo = `https://api.zeks.xyz/api/logobp?apikey=apivinz&text=${q}`
+sendFileFromUrl(logo, image, {quoted: fimg, caption: '*🔥 𝘓𝘰𝘨𝘰𝘴 𝘉𝘺 𝘚𝘢𝘮𝘶𝟥𝟥𝟢 🔥*', sendEphemeral: true})
+break
+			
+case 'noprefix':
+prefix = ''
+reply(`*EL PREFIJO YA NO ES NECESARIO AHORA!*`)
+break
+
+case 'notificar':
+if (!isAdmin) return reply(mess.only.admin)
+samu330.updatePresence(from, Presence.composing)
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+teks = `Notificación dada por @${sender.split("@")[0]}\n*Mensaje : ${args.join(' ')}*`
+const groupN = await samu330.groupMetadata(from);
+member = groupN['participants']
+jids = [];
+member.map(async adm => {
+jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+})
+options = {
+text: teks,
+contextInfo: {
+mentionedJid: jids, "forwardingScore": 9999, "isForwarded": true
+},
+quoted: faud
+}
+addFilter(from)
+await samu330.sendMessage(from, options, MessageType.text)
+break
+case 'leermas':
+samu330.updatePresence(from, Presence.composing)
+if (!isRegister) return reply(mess.only.usrReg)
+
+if (args.length < 1) return reply(`Escribe el texto\nEjemplo : ${prefix}readmore te amo/rdido un perro?`)
+tels = body.slice(9)
+var teksa = tels.split("/")[0];
+var teks2 = tels.split("/")[1];
+hasil = `${teksa}͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏${teks2}`
+samu330.sendMessage(from, hasil, text, {
+quoted: fimg
+})
+break
+
+case 'enline':
+case 'online':
+if (!isUser) return reply(mess.only.daftarB)										  
+if (!isGroup) return reply(`Solo para grupos`)
+let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
+let online = [...Object.keys(samu330.chats.get(ido).presences), samu330.user.jid]
+samu330.sendMessage(from, '*Lista de usuarios en linea*:\n' + online.map(v => '- @' + v.replace(/@.+/, '')).join `\n`, MessageType.text, {
+quoted: ftoko,
+contextInfo: { mentionedJid: online }
+})
+break
+
+case 'emoji':
+
+if (args.length == 0) return reply(`Ejemplo: ${prefix + command} 😭`)
+emoji = args[0]
+try {
+emoji = encodeURIComponent(emoji[0])
+} catch {
+emoji = encodeURIComponent(emoji)
+}
+ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${api}`)
+await samu330.sendMessage(from, ini_buffer, sticker, { quoted: ftoko })
+break
+
+
+case 'clonar':
+if (!isGroup) return reply(mess.only.group)
+if (!isUser) return reply(mess.only.daftarB)
+if (args.length < 1) return reply('Etiqueta a alguien para utilizar su foto!!!')
+if (sam.message.extendedTextMessage === undefined || sam.message.extendedTextMessage === null) return reply('Etiqueta a alguien')
+mentioned = sam.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let {jid, id1, notify } = groupMembers.find(x => x.jid === mentioned)
+try {
+pp = await samu330.getProfilePicture(id)
+buffer = await getBuffer(pp)
+samu330.updateProfilePicture(botNumber, buffer)
+mentions(`La foto de perfil se actualizó correctamente con la foto de perfil de: @${id.split('@')[0]}`, [jid], true)
+} catch (e) {
+reply(mess.ferr)
+}
+
+case 'clearall':
+if (!isOwner && !itsMe) return await reply('Este comando solo puede ser usado por *Dar* ⚙')
+for (let chat of totalChat) {
+await samu330.modifyChat(chat.jid, "delete")
+}
+await wa.sendFakeStatus(from, "Success clear all chat", "success")
+break
+
+case 'totag':
+if (!isGroup) return reply(mess.only.group)
+if (!isUser) return reply(mess.only.daftarB)
+if ((isMedia && !sam.message.videoMessage || isQuotedSticker) && args.length == 0) {
+encmediau = isQuotedSticker ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group2 = await samu330.groupMetadata(from)
+var member = group2['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+contextInfo: { mentionedJid: mem },
+quoted: fvid
+}
+ini_buffer = fs.readFileSync(file)
+samu330.sendMessage(from, ini_buffer, sticker, options)
+fs.unlinkSync(file)
+} else if ((isMedia && !sam.message.videoMessage || isQuotedImage) && args.length == 0) {
+encmediau = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group26 = await samu330.groupMetadata(from)
+var member = group26['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+contextInfo: { mentionedJid: mem },
+quoted: fvid
+}
+ini_buffer = fs.readFileSync(file)
+samu330.sendMessage(from, ini_buffer, image, options)
+fs.unlinkSync(file)
+} else if ((isMedia && !sam.message.videoMessage || isQuotedAudio) && args.length == 0) {
+encmediau = isQuotedAudio ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group25 = await samu330.groupMetadata(from)
+var member = group25['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+mimetype : 'audio/mp4', duration: 9999999,
+ptt : true,
+contextInfo: { mentionedJid: mem },
+quoted: faud
+}
+ini_buffer = fs.readFileSync(file)
+samu330.sendMessage(from, ini_buffer, audio, options)
+fs.unlinkSync(file)
+} else if ((isMedia && !sam.message.videoMessage || isQuotedVideo) && args.length == 0) {
+encmediau = isQuotedVideo ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group24 = await samu330.groupMetadata(from)
+var member = group24['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+mimetype : 'video/gif',
+contextInfo: { mentionedJid: mem },
+quoted: fvid
+}
+ini_buffer = fs.readFileSync(file)
+samu330.sendMessage(from, ini_buffer, video, options)
+fs.unlinkSync(file)
+} else if ((isMedia && !sam.message.videoMessage || isQuotedDocument) && args.length == 0) {
+encmediau = isQuotedDocument ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group23 = await samu330.groupMetadata(from)
+var member = group23['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+mimetype : 'text/plain',
+contextInfo: { mentionedJid: mem },
+quoted: fdoc
+}
+ini_buffer = fs.readFileSync(file)
+denz.sendMessage(from, ini_buffer, document, options)
+fs.unlinkSync(file)
+}  else if ((isMedia && !sam.message.videoMessage || isQuotedVideo) && args.length == 0) {
+encmediau = isQuotedVideo ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
+file = await samu330.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
+value = args.join(" ")
+var group21 = await samu330.groupMetadata(from)
+var member = group21['participants']
+var mem = []
+member.map(async adm => {
+mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
+})
+var options = {
+mimetype : 'video/mp4', duration: 555555555,
+contextInfo: { mentionedJid: mem },
+quoted: fvid
+}
+ini_buffer = fs.readFileSync(file)
+samu330.sendMessage(from, ini_buffer, video, options)
+fs.unlinkSync(file)
+} else{
+reply(`Etiqueta un texto/documento/gif/sticker/audio/video con el comando: ${prefix}totag`)
+}
+break		
+			
 			
 //ANTILINKS FACEBOOK GRUPOS PERFILES PUBLICACIONES
 			
