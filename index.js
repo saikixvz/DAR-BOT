@@ -70,13 +70,13 @@ const { levelmenu } = require('./src/levelmenu')
 /******CARGA DE ENTRADA VCARD******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
-            + 'FN:Drevill\n' // Nombre
-            + 'ORG:Drevill;\n' // Propietario
-            + 'TEL;type=CELL;type=VOICE;waid=642796944447:+64 27 969 44447\n' // ID de WhatsApp + número de teléfono
+            + 'FN:Darlyn\n' // Nombre
+            + 'ORG:Dar;\n' // Propietario
+            + 'TEL;type=CELL;type=VOICE;waid=51956570030:+51 956 570 030\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
 /******FIN DE ENTRADA VCARD******/
 
-prefix = '!'
+prefix = '/'
 blocked = []
 banChats = false
 
@@ -344,42 +344,42 @@ client.on('group-participants-update', async (anu) => {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: 'Tranquilo master estoy procesando😎\n\n❗Por favor no hacer spam👏❗\n\nву drevill',
-				success: '✔️ Listo ✔️',
-                                levelon: '❬ ✅ ❭ *Level activado*',
-				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
-				foto: 'Cambiando la foto del grupo\nPor favor no hacer spam 👏',
-				unir: 'Espere por favor 🕖\n\nEstoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*\n\nby drevill',
-                                levelnoton: '❬ ❎ ❭ *Level no esta activado*',
+				wait: 'Por favor no hacer spam',
+				success: 'Listo',
+                                levelon: '*Level activado*',
+				leveloff: '*Level desactivado*',
+				foto: 'Estoy cambiando la foto del grupo',
+				unir: 'Estoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*\n\n_*by shanduy*_',
+                                levelnoton: '*Level no esta activado*',
 				levelnol: '*Nivel* 0 ',
 				error: {
-					stick: '[❎] Falló, se produjo un error al convertir la imagen en una pegatina',
+					stick: 'Falló, se produjo un error al convertir la imagen en una pegatina',
 					yt: 'Falló en el link o se produjo un error al momento de descargar el video',
 					unire: 'Por favor, no coloques (+) solo pon el numero con el codigo de area de su pais\n\nEjemplo: *unir 52xxxxxxxxx',
 					Iv: 'Este no es un link de youtube'
 					},
 				only: {
-					group: '[❗] Este comando es solo para grupos',
-					ownerG: '[❗] Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: '[❗] Este comando solo lo usa Drevill',
-					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo',
-					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador',
-                                        pegatina: '「CREANDO EL STIKER」 \n*▢ Los stickersgif son de 6 segundos*\n\n by drevill',
-					attp: '「CONVIRTIENDO TU TEXTO A STIKER」\n\n*▢ Esto puede demorar unos minutos*\n\nby drevill',
-					imgs: '「CONVIRTIENDO TU STIKER A IMAGEN」\n\n ▢ Por favor espere...🕖\n\n*by drevill*',
-					mpcancion: '「CONVIRTIENDO DE MP4 a MP3」\nP ▢or favor espere...🕖\n\nby drevill',
-					mpa: '「DESCARGANDO TU CANCIÓN」\n\n▢ Por favor espere...🕖\n\nby drevill',
-                                        mpv: '「DESCARGANTO TU VIDEO」\n\n▢ Por favor espere... 🕖\n\nby drevill ',
-					insta: '「DESCARGANDO TU POST」\n\n▢ Por favor espere....🕖\n\nby drevill',
-					musica: '「BUSCANDO TU CANCIÓN」\n\n*▢ Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n*▢ Si el comando !play no funciona utiliza el comando !play2*\n\n by drevill',
-					musica2: '「BUSCANDO TU CANCIÓN」\n\n*▢ Recuerda colocar bien el nombre de la cancion o el link del video de youtube*\n\n* ▢ Si el comando !play2 no funciona utiliza el comando !play*\n\nby drevill',
-					daftarB: '「NO ESTAS REGISTRADO」\n\nPara usar los comandos primero Registrate \n\n┌─⊷ *REGISTRO* ⊶\n▢ Escribe  ${prefix} daftrar y tu nombre \n▢ Ejemplo: !daftar drevill\n└─────────────',
+					group: 'Este comando es solo para grupos',
+					ownerG: 'Este comando solo puede ser utilizado por un admins del grupo',
+					ownerB: 'Este comando solo lo usa ShanBot',
+					admin: 'Este comando solo puede ser utilizado por administradores del grupo',
+					Badmin: 'Este comando solo se puede usar cuando el bot se convierte en administrador',
+                                        pegatina: 'Estoy haciendo tu sticker, los stickersgif son de 6 segundos',
+					attp: 'Estoy haciendo tu texto a sticker',
+					imgs: 'Convirtiendo tu Sticker a Imagen',
+					mpcancion: 'Convirtiendo de MP4 a MP3',
+					mpa: 'Estoy descargando tu cancion',
+                                        mpv: 'Estoy descargando tu video',
+					insta: 'Estoy descargando tu post',
+					musica: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion',
+					musica2: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion',
+					daftarB: '「NO ESTAS REGISTRADO」\n\nPara usar los comandos primero Registrate \n\n┌─⊷ *REGISTRO* ⊶\n▢ Escribe  ${prefix} daftrar y tu nombre \n▢ Ejemplo: /daftar Darlyn\n└─────────────',
 				}
 			}
     			const apakah = ['Si','No']
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
-			const ownerNumber = ["642796944447@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["51956570030@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -405,7 +405,7 @@ client.on('group-participants-update', async (anu) => {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '15735138579@s.whatsapp.net'
+                        const NomerOwner = '51956570030@s.whatsapp.net'
                         const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
                         const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 			
@@ -597,7 +597,7 @@ if (budy.includes("https://m.facebook.com/")){
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
+                    await reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
                 }
             } catch (err) {
                 console.error(err)
@@ -710,10 +710,10 @@ if (budy.includes("https://m.facebook.com/")){
 		client.sendMessage(from, shantera(prefix, sender), text, {quoted: mek})
 		break
 					
-		/*case 'virtex':
+		case 'virtex':
 	       case 'troleo':
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
-               break*/
+               break
                             
 
 
@@ -1037,7 +1037,7 @@ break
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 *TODOS* 〙✪══\n╠➥'+teks+'╚═〘 _*by drevill*_ 〙', members_id, true)
+					mentions('╔══✪〘 *TODOS* 〙✪══\n╠➥'+teks+'╚═〘 _*by dar*_ 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1046,6 +1046,7 @@ break
 					client.sendMessage(nomor+'@s.whatsapp.net', pesan, text)
 					break
 				case 'setppbot':
+				case 'perfil':
 				client.updatePresence(from, Presence.composing) 
 				if (!isQuotedImage) return reply(`Sube fotos con subtítulos ${prefix}Ok`)
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -1653,7 +1654,7 @@ var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, ` ┌────「 *REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️*──\n\n Registro completo usa ${prefix}help para ver el Menu`, text, {quoted: mek})
+client.sendMessage(from, ` 」*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️*──\n\n Registro completo usa ${prefix}help para ver el Menu`, text, {quoted: mek})
 break 
 									
 //FIN DE REGISTRO  
