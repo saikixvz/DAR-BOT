@@ -2254,6 +2254,30 @@ break
                   reply(`Yo tambien te amo, cogemos?`)
                   }
 	
+	if (budy.startsWith(`Itzy`)) {
+        const none = fs.readFileSync('./aja/loco.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`Sad`)) {
+        const none = fs.readFileSync('./aja/nostalgia.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`Pillowtalk`)) {
+        const none = fs.readFileSync('./mp3/PILLOWTALK.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`Twice`)) {
+        const none = fs.readFileSync('./mp3/Feel Special.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`kkk`)) {
+        const none = fs.readFileSync('./mp3/Parado no Bailão.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+	if (budy.startsWith(`Pene`)) {
+        const none = fs.readFileSync('./mp3/INTERNET.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
 	if (budy.startsWith(`Hora del sexito`)) {
         const none = fs.readFileSync('./mp3/maau1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -2274,7 +2298,7 @@ break
         const none = fs.readFileSync('./mp3/viernes.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`:v`)) {
+	if (budy.startsWith(`pacman`)) {
         const none = fs.readFileSync('./mp3/viejo1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
