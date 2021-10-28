@@ -2,15 +2,15 @@ const help = (prefix) => {
 	return `
 
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
-▋┋ ☠️Dar-B 𝖔 𝖙 ☠️
-▋┋
+▋┋          ┨ ☠Dar-Bot☠ ┠
+▋┋   ▢ *Nombre* : @${num.split('@')[0]}
+▋┋  ▢ *Número* : ${num.replace('@s.whatsapp.net', '
 ▋┋ Hola,por favor registrarte con:
 ▋┋ /daftar y tú nombre
 ▋┋ /reg y tú nombre
 ▋┋ /rg y tú nombre 
 ▋┋ /verify y tú nombre 
-▋┋ 
-▋┋
+▋┋ /registrar y tú nombre 
 ▋┋ Creador: *☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋┋ Comando: ⌜ ${prefix} ⌟
 ▋┋
