@@ -2453,6 +2453,18 @@ break
                 if (budy.startsWith(`nayeon`)) {
         const none = fs.readFileSync('./webp/nayeon.webp');
 		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
+                  }
+		if (budy.startsWith(`fua`)) {
+        const none = fs.readFileSync('./webp/fua.webp');
+		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
+                  }
+		if (budy.startsWith(`sticker`)) {
+        const none = fs.readFileSync('./webp/ryujin.webp');
+		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
+                  }
+		if (budy.startsWith(`jennie`)) {
+        const none = fs.readFileSync('./webp/jenniedark.webp');
+		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
                   }	
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
