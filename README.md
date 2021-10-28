@@ -18,7 +18,7 @@ Pasos para instalar el bot en termux
 > pkg install ffmpeg
 > pkg install nodejs
 > pkg install wget
-> git clone https://github.com/shanduy/ShanBot
+> git clone https://github.com/darlyn1234/DAR-BOT
 > cd ShanBot
 > bash install.sh
 > npm start
