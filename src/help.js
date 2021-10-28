@@ -2,8 +2,7 @@ const help = (prefix) => {
 	return `
 
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
-▋┋          ┨ ☠Dar-Bot☠ ┠
-▋┋ ▢ *Hora:* ${time}
+▋┋        ┨ ☠Dar-Bot☠ ┠
 ▋┋ 
 ▋┋ Hola,por favor registrarte con:
 ▋┋ /daftar y tú nombre
