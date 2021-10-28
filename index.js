@@ -2449,7 +2449,11 @@ break
 		 if (budy.startsWith(`Ultimo momento`)) {
         const none = fs.readFileSync('./mp3/sombare6.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }			
+                  }
+                if (budy.startsWith(`nayeon`)) {
+        const none = fs.readFileSync('./webp/nayeon.webp');
+		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
+                  }	
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
