@@ -1,7 +1,7 @@
 const welmenu = (prefix, pushname) => {
     return `
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
-▋┋*Comandos De Bienvenida 👋*
+▋┋*Comandos De Bienvenida*
 ▋┋
 ■█ *PARA ACTIVAR LA BIENVENIDA*
 ▋┋
@@ -13,7 +13,7 @@ const welmenu = (prefix, pushname) => {
 ▋┋
 ■█ NOTA: EL BOT NECESITA ADMIN PARA ACTIVAR EL COMANDO
 ▋┋
-▋┋_*☠️Drevill☠️*_
+▋┋_*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 `
 
