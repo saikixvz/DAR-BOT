@@ -10,7 +10,7 @@ const nsfwmenu = (prefix, pushname) => {
 _El bot nesecita admin y tener activado los NSFW_\n _Digita_\n ${prefix}*nsfw 1*
 
 
-ву drevill`
+*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*`
 
 }
 
