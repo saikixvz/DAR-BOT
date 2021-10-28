@@ -1,8 +1,11 @@
 const shantera = (prefix, pushname) => {
     return `*Palabras especificas para que el bot interactue con ustedes*
 
-
-Hora del sexito
+Twice
+Pillowtalk 
+Sara
+Sad
+Pene
 Pongan cuties
 Fiesta del admin
 Admin party
@@ -46,7 +49,7 @@ Enano
 
 _*Ojito escribe tal y como esta en el mensaje*_
 
-ву ѕнαη∂υу`
+ву 𝓓𝓪𝓻𝓵𝔂𝓷`
 
 }
 
