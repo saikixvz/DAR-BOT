@@ -2163,22 +2163,21 @@ break
         const none = fs.readFileSync('./mp3/sombare6.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-                if (budy.startsWith(`nayeon`)) {
-        const none = fs.readFileSync('./webp/nayeon.webp');
-		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
-                  }
-		if (budy.startsWith(`fua`)) {
-        const none = fs.readFileSync('./webp/fua.webp');
-		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
-                  }
-		if (budy.startsWith(`sticker`)) {
-        const none = fs.readFileSync('./webp/ryujin.webp');
-		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
-                  }
-		if (budy.startsWith(`jennie`)) {
-        const none = fs.readFileSync('./webp/jenniedark.webp');
-		client.sendMessage(from, none, MessageType.sticker, {quoted: mek, mimetype: 'sticker/webp'})
-                  }	
+                if (budy.includes(`Bot`)){
+			client.updatePresence(from, Presence.composing)
+			rm = [
+			result = fs.readFileSync(`./mp3/sticker/fua.webp`),
+			result1 = fs.readFileSync(`./mp3/sticker/ryujin.webp`),
+			result2 = fs.readFileSync(`./mp3/sticker/jenniedark.webp`),
+			result3 = fs.readFileSync(`./mp3/sticker/icon.webp`),
+			result4 = fs.readFileSync(`./mp3/sticker/icon1.webp`),
+			result5 = fs.readFileSync(`./mp3/sticker/icon2.webp`),
+			result6 = fs.readFileSync(`./mp3/sticker/icon3.webp`),
+      result6 = fs.readFileSync(`./mp3/sticker/icon4.webp`),
+			]
+			nk = rm[Math.floor(Math.random() * rm.length)]
+			client.sendMessage(from, nk, sticker)
+			}
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
