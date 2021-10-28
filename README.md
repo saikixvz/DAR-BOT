@@ -35,3 +35,7 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 > cd DAR-BOT
 > npm start
 ```
+
+```bash
+> Pene? sexo? Relaciones sexuales?????????
+```
