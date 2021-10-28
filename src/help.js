@@ -3,8 +3,8 @@ const help = (prefix) => {
 
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 ▋┋          ┨ ☠Dar-Bot☠ ┠
-▋┋   ▢ *Nombre* : @${num.split('@')[0]}
-▋┋  ▢ *Número* : ${num.replace('@s.whatsapp.net', '
+▋┋ ▢ *Hora:* ${time}
+▋┋ 
 ▋┋ Hola,por favor registrarte con:
 ▋┋ /daftar y tú nombre
 ▋┋ /reg y tú nombre
