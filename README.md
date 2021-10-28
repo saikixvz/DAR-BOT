@@ -19,7 +19,7 @@ Pasos para instalar el bot en termux
 > pkg install nodejs
 > pkg install wget
 > git clone https://github.com/darlyn1234/DAR-BOT
-> cd ShanBot
+> cd DAR-BOT
 > bash install.sh
 > npm start
 > Y escaneas el QR con tu Whatsapp
@@ -32,6 +32,6 @@ Pasos para instalar el bot en termux
 Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos
 
 ```bash
-> cd ShanBot
+> cd DAR-BOT
 > npm start
 ```
