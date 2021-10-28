@@ -14,7 +14,6 @@ const antimenu = (prefix, pushname) => {
 ▋┋*DESACTIVAR ANTILINK*
 ▋┋${prefix}antilink 0
 ▋┋
-▋┋
 ■█ ✰*INSTAGRAM*✰
 ▋┋
 ▋┋*ACTIVAR ANTILINK*
@@ -55,7 +54,7 @@ const antimenu = (prefix, pushname) => {
 ▋┋*DESACTIVAR ANTILINK*
 ▋┋${prefix}antidiscord 0
 ▋┋
-▋┋☠️Drevill☠️
+▋┋*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 `
 }
