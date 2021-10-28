@@ -18,7 +18,7 @@ const levelmenu = (prefix, pushname) => {
 ▋┋    
 ▋┋NOTA:SI EL BOT SE ACTUALIZA O SE CAMBIA DE NUMERO EL LEVEL SE REINICIA Y QUEDA EN 0
 ▋┋    
-▋┋☠️Drevill☠️
+▋┋*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 `
 
