@@ -4,9 +4,14 @@ const help = (prefix) => {
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 ▋┋ ☠️Dar-B 𝖔 𝖙 ☠️
 ▋┋
-▋┋ Hola por favor registrarte con:
-▋┋ /daftar  y tu nombre
-▋┋ /reg y tu nombre
+▋┋ Hola,por favor registrarte con:
+▋┋ /daftar y tú nombre
+▋┋ /reg y tú nombre
+▋┋ /rg y tú nombre 
+▋┋ /verify y tú nombre 
+▋┋ 
+▋┋
+▋┋ Creador: *☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋┋ Comando: ⌜ ${prefix} ⌟
 ▋┋
 ▋▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
@@ -97,7 +102,7 @@ const help = (prefix) => {
 ▋┋ *Ver los chats del bot*
 ▋┋ ${prefix}grupos
 ▋┋
-▋┋ ☠️D a r☠️
+▋┋ *☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*
 ▋▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄
 `
 }
