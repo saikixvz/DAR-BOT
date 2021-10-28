@@ -1667,12 +1667,12 @@ case 'reg':
 				case 'verify':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar drevill`)
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar darlyn`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, ` 「*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠️𝕾𝖎𝖆𝖗𝖆𝕭𝖔𝖙☠️*──\n\n Registro completo usa ${prefix}help para ver el Menu`, text, {quoted: mek})
+client.sendMessage(from, ` 「*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠Dar-Bot☠*──\n\n Registro completo usa ${prefix}help para ver el menu`, text, {quoted: mek})
 break 
 									
 //FIN DE REGISTRO  
