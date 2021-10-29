@@ -2225,6 +2225,30 @@ break
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
                         }		
+    \if (budy.includes(`gracias`)) {
+        reply(`De nada`)
+        }
+    if (budy.includes(`gracias`)){
+        client.updatePresence(from, Presence.composing)
+        rm = [
+        result = fs.readFileSync(`./mp3/sticker/dar.webp`),
+        result1 = fs.readFileSync(`./mp3/sticker/dar1.webp`),
+        result2 = fs.readFileSync(`./mp3/sticker/dar2.webp`),
+        result3 = fs.readFileSync(`./mp3/sticker/dar3.webp`),
+        result4 = fs.readFileSync(`./mp3/sticker/dar4.webp`),
+        result5 = fs.readFileSync(`./mp3/sticker/dar4.webp`),
+        result6 = fs.readFileSync(`./mp3/sticker/dar5.webp`),
+        result6 = fs.readFileSync(`./mp3/sticker/dar6.webp`),
+        result7 = fs.readFileSync(`./mp3/sticker/dar7.webp`),
+        result8 = fs.readFileSync(`./mp3/sticker/dar8.webp`),
+        result9 = fs.readFileSync(`./mp3/sticker/dar9.webp`),
+        result10 = fs.readFileSync(`./mp3/sticker/dar10.webp`),
+        result10 = fs.readFileSync(`./mp3/sticker/dar11.webp`)
+        ]
+        nk = rm[Math.floor(Math.random() * rm.length)]
+        client.sendMessage(from, nk, sticker)
+        }
+
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
