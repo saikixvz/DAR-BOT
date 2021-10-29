@@ -2173,11 +2173,37 @@ break
 			result4 = fs.readFileSync(`./mp3/sticker/icon1.webp`),
 			result5 = fs.readFileSync(`./mp3/sticker/icon2.webp`),
 			result6 = fs.readFileSync(`./mp3/sticker/icon3.webp`),
-      result6 = fs.readFileSync(`./mp3/sticker/icon4.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/icon4.webp`),
 			]
 			nk = rm[Math.floor(Math.random() * rm.length)]
 			client.sendMessage(from, nk, sticker)
 			}
+			if (budy.includes(`Eu`)){
+                        client.updatePresence(from, Presence.composing)
+                        rm = [
+                        result = fs.readFileSync(`./mp3/sticker/Darlyn.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/Darlyn1.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/Darlyn2.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/Darlyn3.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/Darlyn4.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/Darlyn4.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/Darlyn5.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/Darlyn6.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/Darlyn7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/Darlyn8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/Darlyn9.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/Darlyn10.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/Darlyn11.webp`),
+                        result12 = fs.readFileSync(`./mp3/sticker/Darlyn12.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/Darlyn13.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/Darlyn14.webp`),
+	                result15 = fs.readFileSync(`./mp3/sticker/Darlyn15.webp`),
+	                result16 = fs.readFileSync(`./mp3/sticker/Darlyn16.webp`),
+	                result17 = fs.readFileSync(`./mp3/sticker/Darlyn17.webp`),
+                        ]
+                        nk = rm[Math.floor(Math.random() * rm.length)]
+                        client.sendMessage(from, nk, sticker)
+                        }
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
