@@ -1942,7 +1942,11 @@ break
 	if (budy.includes(`Todo bien`)) {
                   reply(`Si amigo todo bien, todo correcto`)
                   }
-
+                
+		if (budy.includes(`Hola`)) {
+                reply(`Hola, ¿Cómo estás?`)
+                }			
+					
 		if (budy.includes(`Buenos días`)) {
                   reply(`Buenos puto`)
                   }
@@ -1952,11 +1956,11 @@ break
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`Cual gracias, encuerate`)
+                  reply(`De nada po`)
                   }
 
-		if (budy.includes(`trece`)) {
-                  reply(`Entre mas me la mamas, mas me creece`)
+		if (budy.includes(`hola`)) {
+                  reply(`Hola, ¿Cómo estás?`)
                   }
 					
 		if (budy.includes(`Opa`)) {
@@ -1968,7 +1972,7 @@ break
                   }
 	
 	if (budy.startsWith(`Itzy`)) {
-        const none = fs.readFileSync('./aja/loco.mp3');
+        const none = fs.readFileSync('./mp3/loco.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 	if (budy.startsWith(`Sad`)) {
@@ -2202,6 +2206,25 @@ break
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
                         }
+					
+			if (budy.includes(`hola`)){
+                        client.updatePresence(from, Presence.composing)
+                        rm = [
+                        result = fs.readFileSync(`./mp3/sticker/sofi.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/sofi1.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/sofi2.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/sofi3.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/sofi4.webp`),     
+                        result5 = fs.readFileSync(`./mp3/sticker/sofi5.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/sofi6.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/sofi7.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/sofi8.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/sofi9.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/sofi10.webp`),
+                        ]
+                        nk = rm[Math.floor(Math.random() * rm.length)]
+                        client.sendMessage(from, nk, sticker)
+                        }		
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
