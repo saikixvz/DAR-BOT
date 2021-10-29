@@ -1948,7 +1948,7 @@ break
                   }
 
 		if (budy.includes(`Bot`)) {
-                  reply(`Eu que quieres`)
+                  reply(`Eu, ¿Qué quieres?`)
                   }
 
 		if (budy.includes(`Gracias`)) {
@@ -2169,11 +2169,9 @@ break
 			result = fs.readFileSync(`./mp3/sticker/fua.webp`),
 			result1 = fs.readFileSync(`./mp3/sticker/ryujin.webp`),
 			result2 = fs.readFileSync(`./mp3/sticker/jenniedark.webp`),
-			result3 = fs.readFileSync(`./mp3/sticker/icon.webp`),
-			result4 = fs.readFileSync(`./mp3/sticker/icon1.webp`),
-			result5 = fs.readFileSync(`./mp3/sticker/icon2.webp`),
-			result6 = fs.readFileSync(`./mp3/sticker/icon3.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/icon4.webp`),
+			result3 = fs.readFileSync(`./mp3/sticker/icon2.webp`),
+			result4 = fs.readFileSync(`./mp3/sticker/icon3.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/icon4.webp`),
 			]
 			nk = rm[Math.floor(Math.random() * rm.length)]
 			client.sendMessage(from, nk, sticker)
