@@ -2241,7 +2241,7 @@ break
                         result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
                         result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
                         result10 = fs.readFileSync(`./mp3/sticker/da10.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/da11.webp`)
+                        result11 = fs.readFileSync(`./mp3/sticker/da11.webp`)
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
