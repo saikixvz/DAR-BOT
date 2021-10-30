@@ -1964,11 +1964,11 @@ break
                   }
 					
 		if (budy.includes(`Sexo`)) {
-                  reply(`Pasan o paso?`)
+                  reply(`¿Pasan o paso?`)
                   }
                  
-		if (budy.includes(`gracias`)) {
-                  reply(`De nada chupa pija`)
+		if (budy.includes(`Gracias`)) {
+                  reply(`De nada :D`)
                   }
 	
 	if (budy.startsWith(`Itzy`)) {
@@ -2229,19 +2229,19 @@ break
                         if (budy.includes(`sexo`)){
                         client.updatePresence(from, Presence.composing)
                         rm = [
-                        result = fs.readFileSync(`./mp3/sticker/dar.webp`),
-                        result1 = fs.readFileSync(`./mp3/sticker/dar1.webp`),
-                        result2 = fs.readFileSync(`./mp3/sticker/dar2.webp`),
-                        result3 = fs.readFileSync(`./mp3/sticker/dar3.webp`),
-                        result4 = fs.readFileSync(`./mp3/sticker/dar4.webp`),
-                        result5 = fs.readFileSync(`./mp3/sticker/dar4.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/dar5.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/dar6.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/dar7.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/dar8.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/dar9.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/dar10.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/dar11.webp`)
+                        result = fs.readFileSync(`./mp3/sticker/da.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/da1.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/da2.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/da3.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/da4.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/da4.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/da5.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/da6.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/da7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/da10.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/da11.webp`)
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
