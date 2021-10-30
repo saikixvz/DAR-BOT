@@ -1955,8 +1955,8 @@ break
                   reply(`Eu, ¿Qué quieres?`)
                   }
 
-		if (budy.includes(`Gracias`)) {
-                  reply(`De nada po`)
+		if (budy.includes(`Bien`)) {
+                  reply(`Ah, tambien estoy bien, Que haces?`)
                   }
 
 		if (budy.includes(`hola`)) {
@@ -1975,8 +1975,8 @@ break
                   reply(`JAJAJA`)
                   }
 		  
-		  if (budy.includes(`Ok`)) {
-                  reply(`Okey puta`)
+		  if (budy.includes(`bot`)) {
+                  reply(`Eu, ¿Qué quieres?`)
                   }
 	
 	if (budy.startsWith(`Itzy`)) {
@@ -2141,10 +2141,6 @@ break
                   }
 	if (budy.startsWith(`Contate algo bot`)) {
         const none = fs.readFileSync('./mp3/gaspi5.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
-               if (budy.startsWith(`Sexo`)) { 
-        const none = fs.readFileSync('./mp3/sexo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 	if (budy.startsWith(`Pongan cuties`)) { 
