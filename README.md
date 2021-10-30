@@ -39,3 +39,7 @@ Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu inte
 ```bash
 > Pene? sexo? Relaciones sexuales?????????
 ```
+
+```bash
+> a
+```
