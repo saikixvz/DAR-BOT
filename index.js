@@ -720,6 +720,7 @@ if (budy.includes("https://m.facebook.com/")){
 //FUNCIONES DE BAN Y DESBAN			
 			
 case 'ban':
+case 'ban+':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -736,6 +737,7 @@ mentions(`${susp}`, mentioned, true)
 break
 
 case 'desban':
+case 'ban-':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -909,13 +911,21 @@ break
 		
 	
 				case 'owner':
+                                case 'creador':
 					 client.sendMessage(from, {displayname: "Darlyn 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
-		                         client.sendMessage(from, 'Hola 👋 te saluda Dar, este es un mensaje predeterminado\n\n_*by Dar*_',MessageType.text, { quoted: mek} )
+		                         client.sendMessage(from, 'Hola, te saluda Darlyn, ahora me estoy masturbando, por favor escríbeme dentro de 30 minutos o 1 hora, gracias por su comprensión',MessageType.text, { quoted: mek} )
 					 break
 	
 	
+                                         case 'sexo':
+		                         client.sendMessage(from, 'Hola, https://pornohub.com',MessageType.text, { quoted: mek} )
+					 break
+
+                                         case 'playlists':
+		                         client.sendMessage(from, 'Aquí tiens algunas playlist',MessageType.text, { quoted: mek} )
+					 break
 				
-					case 'hd':
+		case 'hd':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroupAdmins) return reply(mess.only.Badmin)
 		if (!isUser) return reply(mess.only.daftarB)
@@ -932,13 +942,11 @@ break
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
                 }
-              await client.sendMessage(from, options, text)
+               await client.sendMessage(from, options, text)
                break
 					
-			case 'hidetag':	
-			     client.updatePresence(from, Presence.composing) 
-                if (!isGroupAdmins) return reply(mess.only.Badmin)
-		if (!isUser) return reply(mess.only.daftarB)
+		case 'hidetag':	
+		client.updatePresence(from, Presence.composing) 
                 if (!isGroup) return reply(mess.only.group)
                 teks = body.slice(9)
                 group = await client.groupMetadata(from);
@@ -992,7 +1000,7 @@ break
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Texto muy largo weon')
+					? reply('Texto muy largo mamaguevazo')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -1009,7 +1017,7 @@ break
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
-					teks = `*Lista De Administradores Del Grupo*\n\n${groupMetadata.subject}\n\nTotal: ${groupAdmins.length}\n\n`
+					teks = `*Lista de las putas del grupo*\n\n${groupMetadata.subject}\n\nTotal: ${groupAdmins.length}\n\n`
 					no = 0
 					for (let admon of groupAdmins) {
 						no += 1
@@ -1023,7 +1031,7 @@ break
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
-					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
+					reply(`El prefijo se ha cambiado a : ${prefix}`)
 					break
 			case 'todos':
 			case 'tagall':
@@ -1035,7 +1043,7 @@ break
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
+						teks += `☆》 @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions('╔══✪〘 *TODOS* 〙✪══\n╠➥'+teks+'╚═〘 _*by dar*_ 〙', members_id, true)
@@ -1049,17 +1057,17 @@ break
 				case 'setppbot':
 				case 'perfil':
 				client.updatePresence(from, Presence.composing) 
-				if (!isQuotedImage) return reply(`Sube fotos con subtítulos ${prefix}Ok`)
+				if (!isQuotedImage) return reply(`Para cambiar la foto de perfil del bot, manda la imagen y luego responde a esa imagen`)
 					if (!isOwner) return reply(mess.only.ownerB)
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(enmedia)
 					await client.updateProfilePicture(botNumber, media)
-					reply('Gracias por el nuevo perfil')
+					reply('Gracias por el nuevo perfil malparido')
 					break
 				case 'bc':
 					client.updatePresence(from, Presence.composing) 
 					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply('.......')
+					if (args.length < 1) return reply('¿Qué hace esta vaina?')
 					anu = await client.chats.all()
 					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1110,12 +1118,12 @@ break
 						if (isAntiWa) return reply('El antilink de Whatsapp ya esta activo')
 						antiwa.push(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antiwa))
-						reply('❬ ✅ ❭ La funcion de antilink de Whatsapp esta habilitada en este grupo')
+						reply('La funcion de antilink de Whatsapp esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antiwa.splice(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antiwa))
-						reply('❬ ✅ ❭ La funcion de antilink de Whatsapp esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Whatsapp esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
 					}
@@ -1131,12 +1139,12 @@ break
 						if (isAntiDiscord) return reply('El antilink de Instagram ya esta activo')
 						antidiscord.push(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antidiscord))
-						reply('❬ ✅ ❭ La funcion de antilink de Discord esta habilitada en este grupo')
+						reply('La funcion de antilink de Discord esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antidiscord.splice(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antidiscord))
-						reply('❬ ✅ ❭ La funcion de antilink de Discord esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Discord esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
 					}
@@ -1147,19 +1155,19 @@ break
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiKwai) return reply('El antilink de Instagram ya esta activo')
 						antikwai.push(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antikwai))
-						reply('❬ ✅ ❭ La funcion de antilink de Kwai esta habilitada en este grupo')
+						reply('La funcion de antilink de Kwai esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envie un link de *Kwai* o de su perfil para pedir likes o followers a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antikwai.splice(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antikwai))
-						reply('❬ ✅ ❭ La funcion de antilink de Kwai esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Kwai esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				
@@ -1168,19 +1176,19 @@ break
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntInsta) return reply('El antilink de Instagram ya esta activo')
 						antinsta.push(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antinsta))
-						reply('❬ ✅ ❭ La funcion de antilink de Instagram esta habilitada en este grupo')
+						reply('La funcion de antilink de Instagram esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envie un link de *Instagram* sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antinsta.splice(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antinsta))
-						reply('❬ ✅ ❭ La funcion de antilink de Instagram esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Instagram esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				
@@ -1190,17 +1198,17 @@ break
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiTik) return reply('El antilink de Tik Tok ya esta activo')
 						antitik.push(from)
 						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('❬ ✅ ❭ La funcion de antilink de Tik Tok esta habilitada en este grupo')
+						reply('La funcion de antilink de Tik Tok esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envia un link de *Tik Tok* sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antitik.splice(from)
 						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('❬ ✅ ❭ La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
@@ -1212,17 +1220,17 @@ break
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiFace) return reply('El antilink de facebook ya esta activo')
 						antiface.push(from)
 						fs.writeFileSync('./src/antiface.json', JSON.stringify(antiface))
-						reply('❬ ✅ ❭ La funcion de antilink de Facebook esta habilitada en este grupo')
+						reply('La funcion de antilink de Facebook esta habilitada en este grupo')
 						client.sendMessage(from,`Cualquier participante que envia un link de *Facebook* sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antiface.splice(from)
 						fs.writeFileSync('./src/antiface.json', JSON.stringify(antiface))
-						reply('❬ ✅ ❭ La funcion de antilink de Facebook esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Facebook esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
@@ -1233,17 +1241,17 @@ break
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiLink) return reply('El antilink ya esta activo')
 						antilink.push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('❬ ✅ ❭ La funcion de antilink de Grupos De Whatsapp esta habilitada en este grupo')
+						reply(`La funcion de antilink de Grupos De Whatsapp esta habilitada en este grupo')
 						client.sendMessage(from,`El antilink esta activo\n\nY solo los admins de este grupo podran pasar el enlace\n\nSi algun participante que no se admin envía un enlace de este grupo u otro grupo sera expulsado de este grupo de inmediato`, text)
 					} else if (Number(args[0]) === 0) {
 						antilink.splice(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('❬ ✅ ❭ La funcion de antilink de Grupos De Whatsapp esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Grupos De Whatsapp esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque !antimenu para ver los comandos de activación de los antilinks')
 					}
@@ -1255,6 +1263,7 @@ break
 //ADMINISTRACION DE GRUPOS
 		                
 case 'leave':
+case 'vete':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 setTimeout( () => {
@@ -1262,20 +1271,21 @@ client.groupLeave (from)
 }, 2000)
 setTimeout( () => {
 client.updatePresence(from, Presence.composing) 
-client.sendMessage(from, 'NOS VEMOS GILES ', text) // ur cods
+client.sendMessage(from, 'NOS VEMOS MAMAGUEVAZOS😡🏑', text) // ur cods
 }, 0)
 break
        
 case 'exe':
 case 'bye':
+case 'b':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isOwner) return reply(mess.only.ownerB)
 setTimeout( () => {
 client.groupLeave (from) 
 }, 2000)
 setTimeout( () => {
 client.updatePresence(from, Presence.composing) 
-client.sendMessage(from, 'NOS VEMOS MAMAGUEVAZOS', text) // ur cods
+client.sendMessage(from, 'NOS VEMOS MAMAGUEVAZOS😡🎸', text) // ur cods
 }, 0)
 break
 					
@@ -1289,7 +1299,7 @@ client.sendMessage(from, options, text, { quoted: mek } )
 break
                                       
                                         case 'kick':
-				case 'pafuera':
+				        case 'pafuera':
 					case'balazo':
 					case 'alv':
 					client.updatePresence(from, Presence.composing) 
@@ -1312,6 +1322,7 @@ break
 					break
 
 case 'demote':
+case 'adm-':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1332,6 +1343,7 @@ client.groupDemoteAdmin(from, mentioned)
 break
 
 case 'promote':
+case 'adm+':
 client.updatePresence(from, Presence.composing) 
 if (!isUser) return reply(mess.only.daftarB)
 if (!isGroup) return reply(mess.only.group)
@@ -1362,8 +1374,9 @@ yeh = `Aqui esta el link del grupo\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLin
 client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 break
 
-				case 'close':
-					case'cerrar':
+case 'close':
+case'cerrar':
+case 'closegc:
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1378,7 +1391,8 @@ reply(close)
 break
                 
 case 'open':                
-case'abrir':
+case 'abrir':
+case 'opengc':
 client.updatePresence(from, Presence.composing)
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1393,9 +1407,8 @@ break
 				                
 case 'unir':
 if (!isGroup) return reply(mess.only.group)
-if (!isGroupAdmins) return reply(mess.only.admin)
-if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-if (args.length < 1) return reply('Para emocion ✋\nPara unir a una persona debes escribir el numero sin (+)\n\nEjemplo: *unir 52xxxxxxxxx')
+if (!isOwner) return reply(mess.only.ownerB)
+if (args.length < 1) return reply('Para unir a una persona debes escribir el numero sin (+)\n\nEjemplo: *unir 52xxxxxxxxx')
 if (args[0].startsWith('+')) return reply(mess.error.unire)
 try {0
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
@@ -2213,18 +2226,18 @@ break
                         result4 = fs.readFileSync(`./mp3/sticker/Darlyn4.webp`),
                         result5 = fs.readFileSync(`./mp3/sticker/Darlyn4.webp`),
                         result6 = fs.readFileSync(`./mp3/sticker/Darlyn5.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/Darlyn6.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/Darlyn7.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/Darlyn8.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/Darlyn9.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/Darlyn10.webp`),
-                        result11 = fs.readFileSync(`./mp3/sticker/Darlyn11.webp`),
-                        result12 = fs.readFileSync(`./mp3/sticker/Darlyn12.webp`),
-                        result13 = fs.readFileSync(`./mp3/sticker/Darlyn13.webp`),
-                        result14 = fs.readFileSync(`./mp3/sticker/Darlyn14.webp`),
-	                result15 = fs.readFileSync(`./mp3/sticker/Darlyn15.webp`),
-	                result16 = fs.readFileSync(`./mp3/sticker/Darlyn16.webp`),
-	                result17 = fs.readFileSync(`./mp3/sticker/Darlyn17.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/Darlyn6.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/Darlyn7.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/Darlyn8.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/Darlyn9.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/Darlyn10.webp`),
+                        result12 = fs.readFileSync(`./mp3/sticker/Darlyn11.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/Darlyn12.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/Darlyn13.webp`),
+                        result15 = fs.readFileSync(`./mp3/sticker/Darlyn14.webp`),
+	                result16 = fs.readFileSync(`./mp3/sticker/Darlyn15.webp`),
+	                result17 = fs.readFileSync(`./mp3/sticker/Darlyn16.webp`),
+	                result18 = fs.readFileSync(`./mp3/sticker/Darlyn17.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2240,10 +2253,10 @@ break
                         result4 = fs.readFileSync(`./mp3/sticker/sofi4.webp`),     
                         result5 = fs.readFileSync(`./mp3/sticker/sofi5.webp`),
                         result6 = fs.readFileSync(`./mp3/sticker/sofi6.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/sofi7.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/sofi8.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/sofi9.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/sofi10.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/sofi7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/sofi8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/sofi9.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/sofi10.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2259,10 +2272,10 @@ break
                         result4 = fs.readFileSync(`./mp3/sticker/sofi4.webp`),     
                         result5 = fs.readFileSync(`./mp3/sticker/sofi5.webp`),
                         result6 = fs.readFileSync(`./mp3/sticker/sofi6.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/sofi7.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/sofi8.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/sofi9.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/sofi10.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/sofi7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/sofi8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/sofi9.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/sofi10.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2278,12 +2291,12 @@ break
                         result4 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result5 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result6 = fs.readFileSync(`./mp3/sticker/da5.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/da6.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/da7.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/da10.webp`),
-                        result11 = fs.readFileSync(`./mp3/sticker/da11.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/da6.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/da7.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/da8.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/da9.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/da10.webp`),
+                        result12 = fs.readFileSync(`./mp3/sticker/da11.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2299,12 +2312,12 @@ break
                         result4 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result5 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result6 = fs.readFileSync(`./mp3/sticker/da5.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/da6.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/da7.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/da10.webp`),
-                        result11 = fs.readFileSync(`./mp3/sticker/da11.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/da6.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/da7.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/da8.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/da9.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/da10.webp`),
+                        result12 = fs.readFileSync(`./mp3/sticker/da11.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
