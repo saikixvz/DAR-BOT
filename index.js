@@ -868,12 +868,53 @@ ${m}
 reply(`${u}`)
 break
 					
+case 'lucky2':
+a = '⭕'
+b = '❌'
+c = '💢'
+e = '♨️'
+f = '🛑'
+g = '📛'
+pw = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck = pw[Math.floor(Math.random() * pw.length)]
+pw1 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck1 = pw1[Math.floor(Math.random() * pw1.length)]
+pw2 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck2 = pw2[Math.floor(Math.random() * pw2.length)]
+pw3 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck3 = pw3[Math.floor(Math.random() * pw3.length)]
+pw4 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck4 = pw4[Math.floor(Math.random() * pw4.length)]
+pw5 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck5 = pw5[Math.floor(Math.random() * pw5.length)]
+pw6 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck6 = pw6[Math.floor(Math.random() * pw6.length)]
+pw7 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck7 = pw7[Math.floor(Math.random() * pw7.length)]
+pw7 = [`${a}`, `${b}`, `${c}`, `${e}`, `${f}`, `${g}`]
+luck7 = pw7[Math.floor(Math.random() * pw7.length)]
+s = `┃ │  ${luck} │  ${luck1} │ ${luck2}`
+a = `┃ │  ${luck3} │  ${luck4} │ ${luck5}`
+m = `┃ │  ${luck6} │  ${luck7} │ ${luck7}`
+u = `
+╭──┥𝐂𝐀𝐒𝐒𝐈𝐍𝐎┝╾─╮
+╽ ┌──────────┐ ┃
+${s}
+┃ ├──────────┤ ┃
+ ${a}
+┃ ├──────────┤ ┃
+${m}
+╿ └──────────┘ ╿
+╰───┨⃞  Dar┠───╯`
+reply(`${u}`)
+break					
+					
 case 'bot':
 if (!isUser) return reply(mess.only.daftarB)
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`✳️ Ejemplo: *${prefix + command}* soy feo?`)
 d = []
-r = ["Si","No","En efecto"," Tal vez","No lo se","Quizas","Mañana","Jamas", "Un domingo", "no lo hace", "muy falso", "muy real", "Sí lo hace", "Simon al rato"]
+r = ["Si","No","En efecto"," Tal vez","No lo se","Quizas","Mañana","Jamas", "Un domingo", "no lo hace", "muy falso", "muy real", "Sí lo hace", "Simon al rato", "Mmmmm creo que si"]
 random = r[Math.floor(Math.random() * (r.length))]
 preg = `${random}`
 reply(`${preg}`)
@@ -910,19 +951,19 @@ break
 				break
 		
 	
-				case 'owner':
-                                case 'creador':
+				         case 'owner':
+                                         case 'creador':
 					 client.sendMessage(from, {displayname: "Darlyn 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
 		                         client.sendMessage(from, 'Hola, te saluda Darlyn, ahora me estoy masturbando, por favor escríbeme dentro de 30 minutos o 1 hora, gracias por su comprensión',MessageType.text, { quoted: mek} )
 					 break
 					
 /******LINKS DARLYN KKKK******/
                                          case 'sexo':
-		                         client.sendMessage(from, 'Hola, https://pornohub.com',MessageType.text, { quoted: mek} )
+		                         client.sendMessage(from, 'Aqui te dejoo links pajin\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5fb5740bdb24c\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph611676223d5fe\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5dc5899df25a6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph59ff1d784abe7\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591c49b831236\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5db7555de5bd9\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph60002d6c978c6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591ae4fc32014\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5c3d1914a7665\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5df121bedb172\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5e551fecd175b',MessageType.text, { quoted: mek} )
 					 break
 
                                          case 'music':
-		                         client.sendMessage(from, 'Aquí tiens algunas playlist',MessageType.text, { quoted: mek} )
+		                         client.sendMessage(from, 'Aquí tiens algunas playlist:\n\nhttps://open.spotify.com/playlist/37i9dQZF1DWSpF87bP6JSF?si=b9bec9f8d0994e4f\nhttps://open.spotify.com/playlist/37i9dQZF1DX57NRq0pf7ea?si=bd3a981d7ce84d40\nhttps://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT?si=23b8e7ed51ce4a6a\nhttps://open.spotify.com/playlist/37i9dQZF1DWYxZc1Cgg8Ja?si=a3e894fcfb5a4316\nhttps://open.spotify.com/playlist/37i9dQZF1DX39FzqwAhZEK?si=466f08ee43654e4e\nhttps://open.spotify.com/playlist/37i9dQZF1DWT0qByOJYmmJ?si=8570166d8b834680\nhttps://open.spotify.com/playlist/37i9dQZF1DWX83CujKHHOn?si=8a932312f9ed4060\nhttps://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=16e9095cc5284629\nhttps://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT?si=984efe9fe340400c\nhttps://open.spotify.com/playlist/37i9dQZF1DWVV27DiNWxkR?si=68f34ff00b1d46ae\nhttps://open.spotify.com/playlist/37i9dQZF1DWTtTyjgd08yp?si=0374eece53854026\n\nAhi tienes :D',MessageType.text, { quoted: mek} )
 					 break
 					
 					 case 'xnxx':
@@ -930,11 +971,11 @@ break
 					 break
 					
 					 case 'trap':
-		                         client.sendMessage(from, 'Aquí tienes playlist de trap\n\n',MessageType.text, { quoted: mek} )
+		                         client.sendMessage(from, 'A continuacion playlist de trap:\n\nhttps://open.spotify.com/playlist/37i9dQZF1DZ06evO1nGHQ7?si=3620698598ff4c51\nhttps://open.spotify.com/playlist/37i9dQZF1DXde9tuMHuIsj?si=b622ff6770864492',MessageType.text, { quoted: mek} )
 					 break
 					
 					 case 'kpop':
-		                         client.sendMessage(from, 'Aquí tienes playlist de kpop\n\naja',MessageType.text, { quoted: mek} )
+		                         client.sendMessage(from, 'Aquí tienes playlist de kpop\n\O',MessageType.text, { quoted: mek} )
 					 break
 					
 /******LINKS DARLYN KKKK******/
@@ -2383,9 +2424,6 @@ break
                         result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
                         result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
                         result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
-	                result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
-                        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
-                        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2419,68 +2457,68 @@ break
         reply(`Mmmm escuchó música, si deseas te doy el nombre`)
         }
 
-    if (budy.includes(`ok`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`De nada`)) {
+        reply(`okey uu`)
         }
 
-    if (budy.includes(`g`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`de nada`)) {
+        reply(`okey uu`)
         }
 
-    if (budy.includes(`h`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`grupo`)) {
+        reply(`Holaa, como estas? uu`)
         }
 
-    if (budy.includes(`i`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`Grupo`)) {
+        reply(`Holaa, como estas? uu`)
         }
 
     if (budy.incluides(`aja`)) {
         reply(`aja pues`) 
         }
 
-    if (budy.includes(`ok`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`Spam1`)) {
+        reply(`Hace años entré en una web que pone en contacto a atractivos hombres como yo con solteras rusas incluso más atractivas, por razones que no vienen al caso detallar pero que a mi mujer le dije que formaban parte de la documentación para escribir una novela (#truco: TODO se puede explicar diciendo que forma parte de la documentación para una novela). Desde entonces he recibido unos cinco mil mensajes de bellas señoritas que desean entablar conmigo amistad y lo que surja, no necesariamente por ese orden. El mérito es que todos los mensajes son distintos, y que las rusas son incansables por mucho que yo las ignore. Recurren a todo tipo de argumentos para convencerme de que les dé una oportunidad, de momento sin éxito.`)
         }
 
         
-    if (budy.includes(`a`)) {
-        reply(`aaaa`)
+    if (budy.includes(`Spam2`)) {
+        reply(`aaaaa`)
         }
 
-    if (budy.includes(`b`)) {
-        reply(`bdc`)
+    if (budy.includes(`spam3`)) {
+        reply(`no`)
         }
 
-    if (budy.includes(`c`)) {
+    if (budy.includes(`spam4`)) {
         reply(`iou`)
         }
 
-    if (budy.includes(`d`)) {
+    if (budy.includes(`spam5`)) {
+        reply(`spam5`)
+        }
+
+    if (budy.includes(`spam6`)) {
         reply(`okey zorra`)
         }
 
-    if (budy.includes(`e`)) {
+    if (budy.includes(`spam7`)) {
         reply(`okey zorra`)
         }
 
-    if (budy.includes(`f`)) {
+    if (budy.includes(`spam8`)) {
         reply(`okey zorra`)
         }
 
-    if (budy.includes(`g`)) {
+    if (budy.includes(`spam9`)) {
         reply(`okey zorra`)
         }
 
-    if (budy.includes(`h`)) {
+    if (budy.includes(`spam10`)) {
         reply(`okey zorra`)
         }
 
-    if (budy.includes(`i`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.incluides(`aja`)) {
+    if (budy.incluides(`spam11`)) {
         reply(`aja pues`) 
         }
 
