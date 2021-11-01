@@ -915,15 +915,29 @@ break
 					 client.sendMessage(from, {displayname: "Darlyn 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
 		                         client.sendMessage(from, 'Hola, te saluda Darlyn, ahora me estoy masturbando, por favor escríbeme dentro de 30 minutos o 1 hora, gracias por su comprensión',MessageType.text, { quoted: mek} )
 					 break
-	
-	
+					
+/******LINKS DARLYN KKKK******/
                                          case 'sexo':
 		                         client.sendMessage(from, 'Hola, https://pornohub.com',MessageType.text, { quoted: mek} )
 					 break
 
-                                         case 'playlists':
+                                         case 'music':
 		                         client.sendMessage(from, 'Aquí tiens algunas playlist',MessageType.text, { quoted: mek} )
 					 break
+					
+					 case 'xnxx':
+		                         client.sendMessage(from, 'https://www.xnxx.com/\n\nhttps://www.xnxx.com/video-ny6hh8e/emily_willis_hace_su_debut_en_pervcity_en_una_nueva_escena_anal_caliente_con_bill_bailey_recibiendo_una_polla_y_bolas_en_su_ojete\n\nListo pajin',MessageType.text, { quoted: mek} )
+					 break
+					
+					 case 'trap':
+		                         client.sendMessage(from, 'Aquí tienes playlist de trap\n\n',MessageType.text, { quoted: mek} )
+					 break
+					
+					 case 'kpop':
+		                         client.sendMessage(from, 'Aquí tienes playlist de kpop\n\naja',MessageType.text, { quoted: mek} )
+					 break
+					
+/******LINKS DARLYN KKKK******/
 				
 		case 'hd':
                 client.updatePresence(from, Presence.composing) 
@@ -2188,6 +2202,10 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 
+                if (budy.startsWith(`chase`)) {
+                const none = fs.readFileSync('./aja/Friends.mp3');
+                client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                }
 //STICKER AUTOMATICOS
 
                         if (budy.includes(`Bot`)){
@@ -2327,51 +2345,51 @@ break
                         client.sendMessage(from, nk, sticker)
                         }
 
-        if (budy.includes(`Gracias`)){
-        client.updatePresence(from, Presence.composing)
-        rm = [
-        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
-        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
-        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
-        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
-        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
-        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
-        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
-        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
-        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
-        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
-        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
-        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
-	result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
-        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
-        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
-        ]
-        nk = rm[Math.floor(Math.random() * rm.length)]
-        client.sendMessage(from, nk, sticker)
-        }
+                        if (budy.includes(`Gracias`)){
+                        client.updatePresence(from, Presence.composing)
+                        rm = [
+                        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
+	                result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
+                        ]
+                        nk = rm[Math.floor(Math.random() * rm.length)]
+                        client.sendMessage(from, nk, sticker)
+                        }
 
-       if (budy.includes(`gracias`)){
-        client.updatePresence(from, Presence.composing)
-        rm = [
-        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
-        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
-        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
-        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
-        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
-        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
-        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
-        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
-        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
-        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
-        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
-        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
-	result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
-        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
-        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
-        ]
-        nk = rm[Math.floor(Math.random() * rm.length)]
-        client.sendMessage(from, nk, sticker)
-        }
+                        if (budy.includes(`gracias`)){
+                        client.updatePresence(from, Presence.composing)
+                        rm = [
+                        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
+	                result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
+                        ]
+                        nk = rm[Math.floor(Math.random() * rm.length)]
+                        client.sendMessage(from, nk, sticker)
+                        }
 
 
 //INICIO DE INTERACCIONES CON EL BOT
