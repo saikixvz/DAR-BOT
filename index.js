@@ -2394,32 +2394,32 @@ break
 
 //INICIO DE INTERACCIONES CON EL BOT
  
-   if (budy.includes(`ok`)) {
-        reply(`okey zorra`)
+   if (budy.includes(`Bien `)) {
+        reply(`Oh, también estoy bien, gracias, ¿Qué haces?`)
         }
 
         
-    if (budy.includes(`a`)) {
-        reply(`aaaa`)
+    if (budy.includes(`bien`)) {
+        reply(`Oh, también estoy bien gracias, ¿Qué haces? `)
         }
 
-    if (budy.includes(`b`)) {
-        reply(`bdc`)
+    if (budy.includes(`Mal`)) {
+        reply(`Ay, ¿Te pasó algo?:(`)
         }
 
-    if (budy.includes(`c`)) {
-        reply(`iou`)
+    if (budy.includes(`mal`)) {
+        reply(`Ay, ¿Te pasó algo?:(`)
         }
 
-    if (budy.includes(`d`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`haces`)) {
+        reply(`Mmmm escuchó música, si deseas te doy el nombre`)
         }
 
-    if (budy.includes(`e`)) {
-        reply(`okey zorra`)
+    if (budy.includes(`haces`)) {
+        reply(`Mmmm escuchó música, si deseas te doy el nombre`)
         }
 
-    if (budy.includes(`f`)) {
+    if (budy.includes(`ok`)) {
         reply(`okey zorra`)
         }
 
