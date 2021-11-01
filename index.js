@@ -1193,26 +1193,26 @@ break
 					break
 				
 				
-                                  case 'antitik':
+                                  case 'antilink':
                                         if (!isGroup) return reply(mess.only.group)
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
 					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
-						if (isAntiTik) return reply('El antilink de Tik Tok ya esta activo')
-						antitik.push(from)
-						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('La funcion de antilink de Tik Tok esta habilitada en este grupo')
-						client.sendMessage(from,`Cualquier participante que envia un link de *Tik Tok* sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						if (isAntiLink) return reply('El antilink ya esta activo')
+						antilink.push(from)
+						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+						reply('La funcion de antilink de Grupos De Whatsapp esta habilitada en este grupo')
+						client.sendMessage(from,`El antilink esta activo\n\nY solo los admins de este grupo podran pasar el enlace\n\nSi algun participante que no se admin envía un enlace de este grupo u otro grupo sera expulsado de este grupo de inmediato`, text)
 					} else if (Number(args[0]) === 0) {
-						antitik.splice(from)
-						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
+						antilink.splice(from)
+						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+						reply('La funcion de antilink de Grupos De Whatsapp esta deshabilitada en este grupo')
 					} else {
 						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
-					break 
+					break
 				
 				
 				case 'antiface':
@@ -1376,7 +1376,7 @@ break
 
 case 'close':
 case'cerrar':
-case 'closegc:
+case 'closegc':
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1427,16 +1427,16 @@ if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 media = await client.downloadAndSaveMediaMessage(mek)
 await client.updateProfilePicture (from, media)
-reply('*⌊✅⌉ El cambio de foto del grupo fue exitoso*')
+reply('*El cambio de foto del grupo fue exitoso*')
 break						
 				
-case 'name':
-				case 'ngc':
+      case 'name':
+      case 'ngc':
       if (!isGroup) return reply(mess.only.group)
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
       client.groupUpdateSubject(from, `${body.slice(6)}`)
-      client.sendMessage(from, '*⌊✅⌉ El nombre del grupo fue cambiado*', text, {quoted: mek})
+      client.sendMessage(from, '*El nombre del grupo fue cambiado*', text, {quoted: mek})
       break
 
 				case 'dgc':
@@ -1445,7 +1445,7 @@ case 'name':
       if (!isGroupAdmins) return reply(mess.only.admin)
       if (!isBotGroupAdmins) return reply(mess.only.Badmin)
       client.groupUpdateDescription(from, `${body.slice(5)}`)
-      client.sendMessage(from, '*⌊✅⌉ La descripción del grupo fue cambiado*', text, {quoted: mek})
+      client.sendMessage(from, '*a descripción del grupo fue cambiado*', text, {quoted: mek})
       break
 
 case 'welcome':
@@ -1458,13 +1458,13 @@ if (Number(args[0]) === 1) {
 if (isWelkom) return reply('Ya esta activada!!!')
 welkom.push(from)
 fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
+reply('La funcion de bienvenida esta habilitada en este grupo')
 } else if (Number(args[0]) === 0) {
 welkom.splice(from)
 fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
+reply('La funcion de bienvenida esta deshabilitada en este grupo')
 } else {
-reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: !welcome 1')
+reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: /welcome 1')
 }
 break					
 					
@@ -1591,32 +1591,33 @@ break
 				break  
 				
 				case 'toimg':
+                                case 'im':
 				    client.updatePresence(from, Presence.composing)
                                     if (!isUser) return reply(mess.only.daftarB)
-					if (!isQuotedSticker) return reply('❌ Solo stickers')
+					if (!isQuotedSticker) return reply('Solo stickers')
 					reply(mess.only.imgs)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
+						if (err) return reply('No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby darlyn'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Imagen convertida'})
 						fs.unlinkSync(ran)
 					})
 					break
                         case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
                         if (!isUser) return reply(mess.only.daftarB)
-					if (!isQuotedVideo) return reply('❌ Solo videos')
+					if (!isQuotedVideo) return reply('Solo videos')
 					reply(mess.only.mpcancion)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.mp4')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el video a mp3')
+						if (err) return reply('No se pudo convertir el video a mp3')
 						buffer = fs.readFileSync(ran)
 						client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
 						fs.unlinkSync(ran)
@@ -1676,8 +1677,9 @@ break
 
 case 'daftar':
 case 'reg':
-				case 'rg':
-				case 'verify':
+case 'rg':
+case 'verify':
+case 'registrar':
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado 🧐')
 if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar darlyn`)
@@ -1685,7 +1687,7 @@ var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
 fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-client.sendMessage(from, ` 「*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠Dar-Bot☠*──\n\n Registro completo usa ${prefix}help para ver el menu`, text, {quoted: mek})
+client.sendMessage(from, ` 「*REGISTRADO* 」─\n\ ▢ *Nombre:* ${nombre}\n ▢ *Número:* wa.me/${sender.split("@")[0]}\n\ ▢ *Hora:* ${time}\n ▢ *Usuarios Verificados:* ${user.length} \n└────「 *☠Dar-Bot☠*──\n\n Registro completo usa ${prefix}help para ver el menu y leer el resto de comandos`, text, {quoted: mek})
 break 
 									
 //FIN DE REGISTRO  
@@ -1928,7 +1930,8 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
-                                case 'ping':    
+                                case 'ping':
+                                case 'velocidad':
 			   	        if (!isUser) return reply(mess.only.userB)
                                         const timestamp = speed();
                                         const latensi = speed() - timestamp
@@ -1960,7 +1963,7 @@ break
                 reply(`Hola, ¿Cómo estás?`)
                 }			
 					
-		if (budy.includes(`Gracias`)) {
+		if (budy.includes(`gracias`)) {
                   reply(`De nada uu`)
                   }
 
@@ -1980,7 +1983,7 @@ break
                   reply(`¿Pasan o paso?`)
                   }
                  
-		if (budy.includes(`gracias`)) {
+		if (budy.includes(`Gracias`)) {
                   reply(`De nada :D`)
                   }
 		  
@@ -2184,6 +2187,9 @@ break
         const none = fs.readFileSync('./mp3/sombare6.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+
+//STICKER AUTOMATICOS
+
                         if (budy.includes(`Bot`)){
 			client.updatePresence(from, Presence.composing)
 			rm = [
@@ -2285,18 +2291,17 @@ break
                         client.updatePresence(from, Presence.composing)
                         rm = [
                         result = fs.readFileSync(`./mp3/sticker/da.webp`),
-                        result1 = fs.readFileSync(`./mp3/sticker/da1.webp`),
-                        result2 = fs.readFileSync(`./mp3/sticker/da2.webp`),
-                        result3 = fs.readFileSync(`./mp3/sticker/da3.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/da2.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/da3.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result4 = fs.readFileSync(`./mp3/sticker/da4.webp`),
-                        result5 = fs.readFileSync(`./mp3/sticker/da4.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/da5.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/da6.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/da7.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/da8.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/da9.webp`),
-                        result11 = fs.readFileSync(`./mp3/sticker/da10.webp`),
-                        result12 = fs.readFileSync(`./mp3/sticker/da11.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/da5.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/da6.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/da7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/da10.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/da11.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2306,24 +2311,163 @@ break
                         client.updatePresence(from, Presence.composing)
                         rm = [
                         result = fs.readFileSync(`./mp3/sticker/da.webp`),
-                        result1 = fs.readFileSync(`./mp3/sticker/da1.webp`),
-                        result2 = fs.readFileSync(`./mp3/sticker/da2.webp`),
-                        result3 = fs.readFileSync(`./mp3/sticker/da3.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/da2.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/da3.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/da4.webp`),
                         result4 = fs.readFileSync(`./mp3/sticker/da4.webp`),
-                        result5 = fs.readFileSync(`./mp3/sticker/da4.webp`),
-                        result6 = fs.readFileSync(`./mp3/sticker/da5.webp`),
-                        result7 = fs.readFileSync(`./mp3/sticker/da6.webp`),
-                        result8 = fs.readFileSync(`./mp3/sticker/da7.webp`),
-                        result9 = fs.readFileSync(`./mp3/sticker/da8.webp`),
-                        result10 = fs.readFileSync(`./mp3/sticker/da9.webp`),
-                        result11 = fs.readFileSync(`./mp3/sticker/da10.webp`),
-                        result12 = fs.readFileSync(`./mp3/sticker/da11.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/da5.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/da6.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/da7.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/da8.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/da9.webp`),
+                        result10= fs.readFileSync(`./mp3/sticker/da10.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/da11.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
                         }
 
+        if (budy.includes(`Gracias`)){
+        client.updatePresence(from, Presence.composing)
+        rm = [
+        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
+        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
+        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
+        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
+        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
+        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
+        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
+        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
+        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
+        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
+        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
+        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
+	result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
+        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
+        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
+        ]
+        nk = rm[Math.floor(Math.random() * rm.length)]
+        client.sendMessage(from, nk, sticker)
+        }
 
+       if (budy.includes(`gracias`)){
+        client.updatePresence(from, Presence.composing)
+        rm = [
+        result = fs.readFileSync(`./mp3/sticker/cl1.webp`),
+        result1 = fs.readFileSync(`./mp3/sticker/cl2.webp`),
+        result2 = fs.readFileSync(`./mp3/sticker/cl3.webp`),
+        result3 = fs.readFileSync(`./mp3/sticker/cl4.webp`),
+        result4 = fs.readFileSync(`./mp3/sticker/cl5.webp`),
+        result5 = fs.readFileSync(`./mp3/sticker/cl6.webp`),
+        result6 = fs.readFileSync(`./mp3/sticker/cl7.webp`),
+        result7 = fs.readFileSync(`./mp3/sticker/cl8.webp`),
+        result8 = fs.readFileSync(`./mp3/sticker/cl9.webp`),
+        result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
+        result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
+        result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
+	result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
+        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
+        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
+        ]
+        nk = rm[Math.floor(Math.random() * rm.length)]
+        client.sendMessage(from, nk, sticker)
+        }
+
+
+//INICIO DE INTERACCIONES CON EL BOT
+ 
+   if (budy.includes(`ok`)) {
+        reply(`okey zorra`)
+        }
+
+        
+    if (budy.includes(`a`)) {
+        reply(`aaaa`)
+        }
+
+    if (budy.includes(`b`)) {
+        reply(`bdc`)
+        }
+
+    if (budy.includes(`c`)) {
+        reply(`iou`)
+        }
+
+    if (budy.includes(`d`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`e`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`f`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`g`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`h`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`i`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.incluides(`aja`)) {
+        reply(`aja pues`) 
+        }
+
+    if (budy.includes(`ok`)) {
+        reply(`okey zorra`)
+        }
+
+        
+    if (budy.includes(`a`)) {
+        reply(`aaaa`)
+        }
+
+    if (budy.includes(`b`)) {
+        reply(`bdc`)
+        }
+
+    if (budy.includes(`c`)) {
+        reply(`iou`)
+        }
+
+    if (budy.includes(`d`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`e`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`f`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`g`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`h`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.includes(`i`)) {
+        reply(`okey zorra`)
+        }
+
+    if (budy.incluides(`aja`)) {
+        reply(`aja pues`) 
+        }
+
+
+//FIN DE LAS INTERACCCIONES CON EL BOT
 
 		if (budy.startsWith(`Nefasto`)) {
         const none = fs.readFileSync('./mp3/gaspi1.mp3');
