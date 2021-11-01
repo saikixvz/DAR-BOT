@@ -2016,18 +2016,10 @@ break
                 
 		if (budy.includes(`Hola`)) {
                 reply(`Hola, ¿Cómo estás?`)
-                }			
-					
-		if (budy.includes(`gracias`)) {
-                  reply(`De nada uu`)
-                  }
+                }
 
 		if (budy.includes(`Bot`)) {
                   reply(`Eu, ¿Qué quieres?`)
-                  }
-
-		if (budy.includes(`Bien`)) {
-                  reply(`Ah, tambien estoy bien, Que haces?`)
                   }
 
 		if (budy.includes(`hola`)) {
@@ -2040,10 +2032,6 @@ break
                  
 		if (budy.includes(`Gracias`)) {
                   reply(`De nada :D`)
-                  }
-		  
-		  if (budy.includes(`owao`)) {
-                  reply(`JAJAJA`)
                   }
 		  
 		  if (budy.includes(`bot`)) {
@@ -2458,73 +2446,10 @@ break
 					
 
 //INICIO DE INTERACCIONES CON EL BOT
- 
-   if (budy.includes(`Bien `)) {
-        reply(`Oh, también estoy bien, gracias, ¿Qué haces?`)
-        }
-
-        
-    if (budy.includes(`bien`)) {
-        reply(`Oh, también estoy bien gracias, ¿Qué haces? `)
-        }
-
-    if (budy.includes(`Mal`)) {
-        reply(`Ay, ¿Te pasó algo?:(`)
-        }
-
-    if (budy.includes(`mal`)) {
-        reply(`Ay, ¿Te pasó algo?:(`)
-        }
-
-    if (budy.includes(`Haces`)) {
-        reply(`Mmmm escuchó música, si deseas te doy el nombre`)
-        }
-
-    if (budy.includes(`haces`)) {
-        reply(`Mmmm escuchó música, si deseas te doy el nombre`)
-        }
-
-    if (budy.includes(`De nada`)) {
-        reply(`okey uu`)
-        }
-
-    if (budy.includes(`de nada`)) {
-        reply(`okey uu`)
-        }
-
-    if (budy.includes(`grupo`)) {
-        reply(`Holaa, como estas? uu`)
-        }
-
-    if (budy.includes(`Grupo`)) {
-        reply(`Holaa, como estas? uu`)
-        }
-
-    if (budy.incluides(`aja`)) {
-        reply(`aja pues`) 
-        }
 
     if (budy.includes(`Spam1`)) {
         reply(`Hace años entré en una web que pone en contacto a atractivos hombres como yo con solteras rusas incluso más atractivas, por razones que no vienen al caso detallar pero que a mi mujer le dije que formaban parte de la documentación para escribir una novela (#truco: TODO se puede explicar diciendo que forma parte de la documentación para una novela). Desde entonces he recibido unos cinco mil mensajes de bellas señoritas que desean entablar conmigo amistad y lo que surja, no necesariamente por ese orden. El mérito es que todos los mensajes son distintos, y que las rusas son incansables por mucho que yo las ignore. Recurren a todo tipo de argumentos para convencerme de que les dé una oportunidad, de momento sin éxito.`)
         }
-
-        
-    if (budy.includes(`Spam2`)) {
-        reply(`aaaaa`)
-        }
-
-    if (budy.includes(`spam3`)) {
-        reply(`no`)
-        }
-
-    if (budy.includes(`spam4`)) {
-        reply(`iou`)
-        }
-
-    if (budy.includes(`spam5`)) {
-        reply(`spam5`)
-        }
-
 
 //FIN DE LAS INTERACCCIONES CON EL BOT
 
