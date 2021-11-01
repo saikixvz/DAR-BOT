@@ -2401,9 +2401,6 @@ break
                         result9 = fs.readFileSync(`./mp3/sticker/cl10.webp`),
                         result10 = fs.readFileSync(`./mp3/sticker/cl11.webp`),
                         result11 = fs.readFileSync(`./mp3/sticker/cl12.webp`),
-	                result12 = fs.readFileSync(`./mp3/sticker/cl13.webp`),
-                        result13 = fs.readFileSync(`./mp3/sticker/cl14.webp`),
-                        result14 = fs.readFileSync(`./mp3/sticker/cl15.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
@@ -2429,6 +2426,36 @@ break
                         client.sendMessage(from, nk, sticker)
                         }
 
+                        if (budy.includes(`Eu`)){
+                        client.updatePresence(from, Presence.composing)
+                        rm = [
+                        result = fs.readFileSync(`./mp3/sticker/dofi.webp`),
+                        result1 = fs.readFileSync(`./mp3/sticker/dofi2.webp`),
+                        result2 = fs.readFileSync(`./mp3/sticker/dofi3.webp`),
+                        result3 = fs.readFileSync(`./mp3/sticker/dofi4.webp`),
+                        result4 = fs.readFileSync(`./mp3/sticker/dofi5.webp`),
+                        result5 = fs.readFileSync(`./mp3/sticker/dofi6.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/dofi7.webp`),
+                        result6 = fs.readFileSync(`./mp3/sticker/dofi8.webp`),
+                        result7 = fs.readFileSync(`./mp3/sticker/dofi9.webp`),
+                        result8 = fs.readFileSync(`./mp3/sticker/dofi10.webp`),
+                        result9 = fs.readFileSync(`./mp3/sticker/dofi11.webp`),
+                        result10 = fs.readFileSync(`./mp3/sticker/dofi12.webp`),
+                        result11 = fs.readFileSync(`./mp3/sticker/dofi13.webp`),
+                        result12 = fs.readFileSync(`./mp3/sticker/dofi14.webp`)
+                        result13 = fs.readFileSync(`./mp3/sticker/dof15.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/dofi16.webp`),
+                        result15 = fs.readFileSync(`./mp3/sticker/dofi17.webp`),
+                        result16 = fs.readFileSync(`./mp3/sticker/dofi18.webp`),
+                        result17 = fs.readFileSync(`./mp3/sticker/dofi19.webp`),
+                        result18 = fs.readFileSync(`./mp3/sticker/dofi20.webp`),
+                        result19 = fs.readFileSync(`./mp3/sticker/dofi21.webp`),
+                        ]
+                        nk = rm[Math.floor(Math.random() * rm.length)]
+                        client.sendMessage(from, nk, sticker)
+                        }					
+					
+					
 
 //INICIO DE INTERACCIONES CON EL BOT
  
@@ -2449,7 +2476,7 @@ break
         reply(`Ay, ¿Te pasó algo?:(`)
         }
 
-    if (budy.includes(`haces`)) {
+    if (budy.includes(`Haces`)) {
         reply(`Mmmm escuchó música, si deseas te doy el nombre`)
         }
 
@@ -2496,30 +2523,6 @@ break
 
     if (budy.includes(`spam5`)) {
         reply(`spam5`)
-        }
-
-    if (budy.includes(`spam6`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.includes(`spam7`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.includes(`spam8`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.includes(`spam9`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.includes(`spam10`)) {
-        reply(`okey zorra`)
-        }
-
-    if (budy.incluides(`spam11`)) {
-        reply(`aja pues`) 
         }
 
 
