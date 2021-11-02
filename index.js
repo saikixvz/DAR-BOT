@@ -964,6 +964,29 @@ break
 					 client.sendMessage(from, {displayname: "Darlyn 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
 		                         client.sendMessage(from, 'Hola, te saluda Darlyn, ahora me estoy masturbando, por favor escríbeme dentro de 30 minutos o 1 hora, gracias por su comprensión',MessageType.text, { quoted: mek} )
 					 break
+					
+/******LINKS DARLYN KKKK******/
+                                         case 'sexo':
+		                         client.sendMessage(from, 'Aqui te dejoo links pajin\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5fb5740bdb24c\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph611676223d5fe\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5dc5899df25a6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph59ff1d784abe7\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591c49b831236\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5db7555de5bd9\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph60002d6c978c6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591ae4fc32014\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5c3d1914a7665\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5df121bedb172\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5e551fecd175b',MessageType.text, { quoted: mek} )
+					 break
+
+                                         case 'music':
+		                         client.sendMessage(from, 'Aquí tiens algunas playlist:\n\nhttps://open.spotify.com/playlist/37i9dQZF1DWSpF87bP6JSF?si=b9bec9f8d0994e4f\nhttps://open.spotify.com/playlist/37i9dQZF1DX57NRq0pf7ea?si=bd3a981d7ce84d40\nhttps://open.spotify.com/playlist/37i9dQZF1DWXJfnUiYjUKT?si=23b8e7ed51ce4a6a\nhttps://open.spotify.com/playlist/37i9dQZF1DWYxZc1Cgg8Ja?si=a3e894fcfb5a4316\nhttps://open.spotify.com/playlist/37i9dQZF1DX39FzqwAhZEK?si=466f08ee43654e4e\nhttps://open.spotify.com/playlist/37i9dQZF1DWT0qByOJYmmJ?si=8570166d8b834680\nhttps://open.spotify.com/playlist/37i9dQZF1DWX83CujKHHOn?si=8a932312f9ed4060\nhttps://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634?si=16e9095cc5284629\nhttps://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT?si=984efe9fe340400c\nhttps://open.spotify.com/playlist/37i9dQZF1DWVV27DiNWxkR?si=68f34ff00b1d46ae\nhttps://open.spotify.com/playlist/37i9dQZF1DWTtTyjgd08yp?si=0374eece53854026\n\nAhi tienes :D',MessageType.text, { quoted: mek} )
+					 break
+					
+					 case 'xnxx':
+		                         client.sendMessage(from, 'https://www.xnxx.com/\n\nhttps://www.xnxx.com/video-ny6hh8e/emily_willis_hace_su_debut_en_pervcity_en_una_nueva_escena_anal_caliente_con_bill_bailey_recibiendo_una_polla_y_bolas_en_su_ojete\n\nListo pajin',MessageType.text, { quoted: mek} )
+					 break
+					
+					 case 'trap':
+		                         client.sendMessage(from, 'A continuacion playlist de trap:\n\nhttps://open.spotify.com/playlist/37i9dQZF1DZ06evO1nGHQ7?si=3620698598ff4c51\nhttps://open.spotify.com/playlist/37i9dQZF1DXde9tuMHuIsj?si=b622ff6770864492',MessageType.text, { quoted: mek} )
+					 break
+					
+					 case 'kpop':
+		                         client.sendMessage(from, 'Aquí tienes playlist de kpop\n\O',MessageType.text, { quoted: mek} )
+					 break
+					
+/******LINKS DARLYN KKKK******/					
 	
 	
 	case 'x':
