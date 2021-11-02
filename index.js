@@ -2430,7 +2430,7 @@ break
                         result9 = fs.readFileSync(`./mp3/sticker/dofi11.webp`),
                         result10 = fs.readFileSync(`./mp3/sticker/dofi12.webp`),
                         result11 = fs.readFileSync(`./mp3/sticker/dofi13.webp`),
-                        result12 = fs.readFileSync(`./mp3/sticker/dofi14.webp`)
+                        result12 = fs.readFileSync(`./mp3/sticker/dofi14.webp`),
                         result13 = fs.readFileSync(`./mp3/sticker/dof15.webp`),
                         result14 = fs.readFileSync(`./mp3/sticker/dofi16.webp`),
                         result15 = fs.readFileSync(`./mp3/sticker/dofi17.webp`),
