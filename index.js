@@ -253,10 +253,6 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `HOLAA!! @${num.split('@')[0]} ¿COMO ESTAS?😃\n\n『Bienvenido A *${mdata.subject}*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`
-                          client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
-			} else if (anu.action == 'remove') {
-					num = anu.participants[0]
 				try {
 					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {
@@ -2470,7 +2466,7 @@ break
                         result10 = fs.readFileSync(`./mp3/sticker/dofi12.webp`),
                         result11 = fs.readFileSync(`./mp3/sticker/dofi13.webp`),
                         result12 = fs.readFileSync(`./mp3/sticker/dofi14.webp`),
-                        result13 = fs.readFileSync(`./mp3/sticker/dof15.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/dofi15.webp`),
                         result14 = fs.readFileSync(`./mp3/sticker/dofi16.webp`),
                         result15 = fs.readFileSync(`./mp3/sticker/dofi17.webp`),
                         result16 = fs.readFileSync(`./mp3/sticker/dofi18.webp`),
