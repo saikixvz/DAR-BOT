@@ -369,7 +369,7 @@ async function starts() {
 				only: {
 					group: 'Este comando es solo para grupos',
 					ownerG: 'Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: 'Este comando solo lo usa ShanBot',
+					ownerB: 'Este comando solo lo usa Darlyn',
 					admin: 'Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: 'Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         pegatina: 'Estoy haciendo tu sticker, los stickersgif son de 6 segundos',
@@ -1723,7 +1723,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10hamilton`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=20hamilton`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1737,7 +1737,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
 	        reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10shanduy`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=20hamilton`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1771,7 +1771,7 @@ case 'rg':
 case 'verify':
 case 'registrar':					
 client.updatePresence(from, Presence.composing)
-if (isUser) return reply('Ya estas registrado 🧐')
+if (isUser) return reply('Ya estas registrado weon')
 if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar shanduy`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
@@ -2466,13 +2466,12 @@ break
                         result10 = fs.readFileSync(`./mp3/sticker/dofi12.webp`),
                         result11 = fs.readFileSync(`./mp3/sticker/dofi13.webp`),
                         result12 = fs.readFileSync(`./mp3/sticker/dofi14.webp`),
-                        result13 = fs.readFileSync(`./mp3/sticker/dofi15.webp`),
-                        result14 = fs.readFileSync(`./mp3/sticker/dofi16.webp`),
-                        result15 = fs.readFileSync(`./mp3/sticker/dofi17.webp`),
-                        result16 = fs.readFileSync(`./mp3/sticker/dofi18.webp`),
-                        result17 = fs.readFileSync(`./mp3/sticker/dofi19.webp`),
-                        result18 = fs.readFileSync(`./mp3/sticker/dofi20.webp`),
-                        result19 = fs.readFileSync(`./mp3/sticker/dofi21.webp`),
+                        result13 = fs.readFileSync(`./mp3/sticker/dofi16.webp`),
+                        result14 = fs.readFileSync(`./mp3/sticker/dofi17.webp`),
+                        result15 = fs.readFileSync(`./mp3/sticker/dofi18.webp`),
+                        result16 = fs.readFileSync(`./mp3/sticker/dofi19.webp`),
+                        result17 = fs.readFileSync(`./mp3/sticker/dofi20.webp`),
+                        result18 = fs.readFileSync(`./mp3/sticker/dofi21.webp`),
                         ]
                         nk = rm[Math.floor(Math.random() * rm.length)]
                         client.sendMessage(from, nk, sticker)
