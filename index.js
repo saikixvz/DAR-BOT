@@ -1,9 +1,6 @@
  /*
 * Aja pues
 * © 2021 Darlyn, INC.
-Cualquier copia que utilize mi ApiKey sera dado de baja
-- Que hay de nuevo?
-* Nada
 */
 
 const {
@@ -238,10 +235,10 @@ async function starts() {
 
 	fs.existsSync('./Nazwa.json') && client.loadAuthInfo('./Nazwa.json')
 	client.on('connecting', () => {
-		start('2', 'Estas desconectado')
+		start('2', 'Estas desconectado gil')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado by shanduy')
+		success('2', 'Conectado by Darlyn')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -1181,7 +1178,7 @@ case 'hd':
 		
                                        
 				
-			//ANTILINKS DE REDES SOCIALES FLACO ACEPTALO SOLO LO ESTAS EDITANDO REALMENTE SHANDUY TE HIZO TODO ESTO	
+			//ANTILINKS DE REDES SOCIALES	
 				
 				case 'antiwa':
                                         if (!isGroup) return reply(mess.only.group)
@@ -1333,7 +1330,7 @@ case 'hd':
 					break
 			        
 				
-				//FIN DE ANTILINK HECHO POR SHANDUY
+				//FIN DE ANTILINK HECHO POR DARLYN
 				
 //ADMINISTRACION DE GRUPOS
 		                
@@ -1383,7 +1380,7 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedido recibido jefe, Adios popo 👋 :\n'
+						teks = 'Pedido recibido jefe, Adios  puto :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
                                                 }
@@ -2233,10 +2230,6 @@ break
         const none = fs.readFileSync('./mp3/gaspi9.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-	if (budy.startsWith(`Contate algo bot`)) {
-        const none = fs.readFileSync('./mp3/gaspi5.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
 	if (budy.startsWith(`Pongan cuties`)) { 
         const none = fs.readFileSync('./mp3/neymar1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -2255,10 +2248,6 @@ break
                   }
 		if (budy.startsWith(`Insta de la minita`)) {
         const none = fs.readFileSync('./mp3/sombare4.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
-                 if (budy.startsWith(`Una mierda de bot`)) {
-        const none = fs.readFileSync('./mp3/sombare5.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		 if (budy.startsWith(`Ultimo momento`)) {
