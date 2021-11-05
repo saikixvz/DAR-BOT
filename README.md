@@ -3,6 +3,9 @@
 <img src="https://github.com/darlyn1234/DAR-BOT/blob/main/src/stickers/lq%20idols%20on%20Twitter.jpg" alt="jpg" width="600" height="600"/>
 </p>
 
+## ACTUALIZAR EL BOT
+
+
 Hola!!
 ## Primero Configurar termux
 Una vez descargado termux colocas el siguiente comando
