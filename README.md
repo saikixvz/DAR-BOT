@@ -1,6 +1,6 @@
 # DAR-BOT
 <p align="center">
-<img src="https://github.com/darlyn1234/DAR-BOT/blob/main/src/stickers/lq%20idols%20on%20Twitter.jpg" alt="jpg" width="500" height="600"/>
+<img src="https://github.com/darlyn1234/DAR-BOT/blob/main/src/stickers/lq%20idols%20on%20Twitter.jpg" alt="jpg" width="600" height="600"/>
 </p>
 
 Hola!!
