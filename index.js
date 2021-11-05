@@ -64,6 +64,8 @@ const { welmenu } = require('./src/welmenu')
 const { banmenu } = require('./src/banmenu')
 const { otak } = require('./src/otak')
 const { levelmenu } = require('./src/levelmenu')
+const { reto } = require('./src/reto')
+const { verdad } = require('./src/verdad')
 /******FIN DE ENTRADA DEL MENÚ******/
 
 /******CARGA DE ENTRADA VCARD******/
