@@ -437,7 +437,7 @@ if (budy.includes("https://wa.me/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE WHATSAPP DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -453,7 +453,7 @@ if (budy.includes("https://wa.me/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE WHATSAPP DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -475,7 +475,7 @@ if (budy.includes("https://www.facebook.com/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE FACEBOOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE FACEBOOK DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -491,7 +491,7 @@ if (budy.includes("https://m.facebook.com/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE FACEBOOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE FACEBOOK DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -512,7 +512,7 @@ if (budy.includes("https://m.facebook.com/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE DISCORD DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE DISCORD DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -528,7 +528,7 @@ if (budy.includes("https://m.facebook.com/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE KWAI DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE KWAI DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -544,7 +544,7 @@ if (budy.includes("https://m.facebook.com/")){
 	        if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE INSTAGRAM DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE INSTAGRAM DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -560,7 +560,7 @@ if (budy.includes("https://m.facebook.com/")){
                 if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE TIK TOK DETECTADO 📢* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
+		reply(`*LINK DE TIK TOK DETECTADO* ${sender.split("@")[0]} Usted sera eliminado de este grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -576,7 +576,7 @@ if (budy.includes("https://m.facebook.com/")){
 		if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
 		client.updatePresence(from, Presence.composing)
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted será expulsado del grupo`)
+		reply(`*LINK DE WHATSAPP DETECTADO* ${sender.split("@")[0]} Usted será expulsado del grupo`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 0)
@@ -602,7 +602,7 @@ if (budy.includes("https://m.facebook.com/")){
                 addLevelingXp(sender, amountXp)
                 if (requiredXp <= getLevelingXp(sender)) {
                     addLevelingLevel(sender, 1)
-                    await reply(`*「 FELICIDADES LEVEL UP 🆙🥳 」*\n\nFelicidades subiste de nivel sigue asi 👏\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
+                    await reply(`*「FELICIDADES LEVEL UP」*\n\nFelicidades subiste de nivel sigue asi\n\n*NOMBRE*\n${pushname}\n*XP*: ${getLevelingXp(sender)}\n*NIVEL*: ${getLevel} ⟿ ${getLevelingLevel(sender)}\n\n_*Para ver tu XP en tiempo real coloca el comando ${prefix}level*_`)
                 }
             } catch (err) {
                 console.error(err)
@@ -828,6 +828,42 @@ reply('Hubo un error intentalo nuevamente :/')
 }
 break	
 
+case 'ceperos':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 10 de los ceperos del grupo\n\n'
+for(i = 0; i < 10; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break				
+
+case 'simps':
+try{
+if (!isUser) return reply(mess.only.daftarB)
+if (!isGroup) return reply(mess.only.group)
+d = []
+teks = 'Top 7 de los mas simps del grupo\n\n'
+for(i = 0; i < 7; i++) {
+r = Math.floor(Math.random() * groupMetadata.participants.length + 0)
+teks += `➔ @${groupMembers[r].jid.split('@')[0]}\n`
+d.push(groupMembers[r].jid)
+}
+mentions(teks, d, true)
+} catch (e) {
+console.log(e)
+reply('Hubo un error intentalo nuevamente :/')
+}
+break
+					
 case 'lucky':
 a = '🍇'
 b = '🍎'
@@ -954,7 +990,7 @@ break
 	
 	                                 case 'owner':
                                          case 'creador':
-					 client.sendMessage(from, {displayname: "Darlyn 🥸", vcard: vcard}, MessageType.contact, { quoted: mek})
+					 client.sendMessage(from, {displayname: "Darlyn xs", vcard: vcard}, MessageType.contact, { quoted: mek})
 		                         client.sendMessage(from, 'Hola, te saluda Darlyn, ahora me estoy masturbando, por favor escríbeme dentro de 30 minutos o 1 hora, gracias por su comprensión',MessageType.text, { quoted: mek} )
 					 break
 					
@@ -1067,12 +1103,12 @@ case 'hd':
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
                                    if (!isUser) return reply(mess.only.daftarB)
 					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, 'Y el texto?', text, {quoted: mek})
+					if (args.length < 2) return client.sendMessage(from, 'Y el texto gil?', text, {quoted: mek})
 					dtt = body.slice(8)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Texto muy largo weon')
+					? reply('Texto muy largo mamaguevo')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -1085,6 +1121,7 @@ case 'hd':
 					break
                                 case 'listadmins':
 				case 'adminlist':
+				case 'admins':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
@@ -1098,15 +1135,19 @@ case 'hd':
 					break
 			case 'setprefix':
 				case 'prefijo':
+				case 'nvprefix':
 					client.updatePresence(from, Presence.composing) 
 					if (args.length < 1) return
 					if (!isOwner) return reply(mess.only.ownerB)
 					prefix = args[0]
-					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
+					reply(`El prefijo del bot se ha cambiado correctamente a : ${prefix}`)
 					break
 			case 'todos':
 				case 'tagall':
 				case 'invocar':
+				case 'tagall2':
+				case 'tagall3':
+				case 'mencionar':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -1118,7 +1159,7 @@ case 'hd':
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 *TODOS* 〙###'+teks+'╚═〘 _*by dar*_ 〙', members_id, true)
+					mentions('╔══✪〘 *MENCIONANDO A TODOS* 〙###'+teks+'╚═〘 _*by dar*_ 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1185,19 +1226,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiWa) return reply('El antilink de Whatsapp ya esta activo')
 						antiwa.push(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antiwa))
-						reply('❬ ✅ ❭ La funcion de antilink de Whatsapp esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Whatsapp esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antiwa.splice(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antiwa))
-						reply('❬ ✅ ❭ La funcion de antilink de Whatsapp esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Whatsapp esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 					
@@ -1206,19 +1247,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiDiscord) return reply('El antilink de Instagram ya esta activo')
 						antidiscord.push(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antidiscord))
-						reply('❬ ✅ ❭ La funcion de antilink de Discord esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Discord esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envie un link de *Discord* a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antidiscord.splice(from)
 						fs.writeFileSync('./src/antidiscord.json', JSON.stringify(antidiscord))
-						reply('❬ ✅ ❭ La funcion de antilink de Discord esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Discord esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				
@@ -1227,19 +1268,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiKwai) return reply('El antilink de Instagram ya esta activo')
 						antikwai.push(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antikwai))
-						reply('❬ ✅ ❭ La funcion de antilink de Kwai esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envie un link de *Kwai* o de su perfil para pedir likes o followers a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Kwai esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envie un link de *Kwai* o de su perfil para pedir likes o followers a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antikwai.splice(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antikwai))
-						reply('❬ ✅ ❭ La funcion de antilink de Kwai esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Kwai esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				
@@ -1248,19 +1289,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntInsta) return reply('El antilink de Instagram ya esta activo')
 						antinsta.push(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antinsta))
-						reply('❬ ✅ ❭ La funcion de antilink de Instagram esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envie un link de *Instagram* o de su perfil para pedir likes o followers a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Instagram esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envie un link de *Instagram* o de su perfil para pedir likes o followers a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antinsta.splice(from)
 						fs.writeFileSync('./src/antinsta.json', JSON.stringify(antinsta))
-						reply('❬ ✅ ❭ La funcion de antilink de Instagram esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Instagram esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				
@@ -1270,19 +1311,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiTik) return reply('El antilink de Tik Tok ya esta activo')
 						antitik.push(from)
 						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('❬ ✅ ❭ La funcion de antilink de Tik Tok esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envia un link de *Tik Tok* o de su perfil a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Tik Tok esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envia un link de *Tik Tok* o de su perfil a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antitik.splice(from)
 						fs.writeFileSync('./src/antitik.json', JSON.stringify(antitik))
-						reply('❬ ✅ ❭ La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Tik Tok esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break 
 				
@@ -1292,19 +1333,19 @@ case 'hd':
 					if (!isUser) return reply(mess.only.daftarB)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					if (!isGroupAdmins) return reply(mess.only.ownerG)
-					if (args.length < 1) return reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+					if (args.length < 1) return reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					if (Number(args[0]) === 1) {
 						if (isAntiFace) return reply('El antilink de facebook ya esta activo')
 						antiface.push(from)
 						fs.writeFileSync('./src/antiface.json', JSON.stringify(antiface))
-						reply('❬ ✅ ❭ La funcion de antilink de Facebook esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nDesde ahora cualquier participante que envia un link de *Facebook* o de alguna publicacion para pedir likes o grupos a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
+						reply('La funcion de antilink de Facebook esta habilitada en este grupo')
+						client.sendMessage(from,`Desde ahora cualquier participante que envia un link de *Facebook* o de alguna publicacion para pedir likes o grupos a este grupo sera expulsado de inmediato\n\n_*Razones: Spam*_`, text)
 					} else if (Number(args[0]) === 0) {
 						antiface.splice(from)
 						fs.writeFileSync('./src/antiface.json', JSON.stringify(antiface))
-						reply('❬ ✅ ❭ La funcion de antilink de Facebook esta deshabilitada en este grupo')
+						reply('La funcion de antilink de Facebook esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 				        
@@ -1318,14 +1359,14 @@ case 'hd':
 						if (isAntiLink) return reply('El antilink ya esta activo')
 						antilink.push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('❬ ✅ ❭ La funcion de antilink de Grupos De Whatsapp esta habilitada en este grupo')
-						client.sendMessage(from,`Atención a todos los miembros activos de este grupo 📣\n\nEl antilink esta activo\n\nY solo los admins de este grupo podran pasar el enlace\n\nSi algun participante que no se admin envía un enlace de este grupo u otro grupo sera expulsado de este grupo de inmediato`, text)
+						reply('La funcion de antilink de Grupos De Whatsapp esta habilitada en este grupo')
+						client.sendMessage(from,`El antilink esta activo\n\nY solo los admins de este grupo podran pasar el enlace\n\nSi algun participante que no se admin envía un enlace de este grupo u otro grupo sera expulsado de este grupo de inmediato`, text)
 					} else if (Number(args[0]) === 0) {
 						antilink.splice(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('❬ ✅ ❭ La funcion de antilink de Grupos De Whatsapp esta deshabilitada en este grupo')
+						reply('❬La funcion de antilink de Grupos De Whatsapp esta deshabilitada en este grupo')
 					} else {
-						reply('Coloque *antimenu para ver los comandos de activación de los antilinks')
+						reply('Coloque /antimenu para ver los comandos de activación de los antilinks')
 					}
 					break
 			        
