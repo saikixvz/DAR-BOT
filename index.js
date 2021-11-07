@@ -368,7 +368,7 @@ async function starts() {
 				only: {
 					group: 'Este comando es solo para grupos',
 					ownerG: 'Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: 'Este comando solo lo usa Darlyn',
+					ownerB: 'Este comando solo lo usa ☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎',
 					admin: 'Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: 'Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         pegatina: 'Estoy haciendo tu sticker, los stickersgif son de 6 segundos',
@@ -1170,7 +1170,7 @@ case 'hd':
 						teks += `⇝⤐ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 *MENCIONANDO A TODOS* 〙###'+teks+'⇝〘 _*by dar*_ 〙', members_id, true)
+					mentions('⸕ *MENCIONANDO A TODOS* ⸔###'+teks+'⇝↱ _*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*_ ↲', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
