@@ -1167,10 +1167,10 @@ case 'hd':
 					teks = (args.length > 1) ? body.slice(7).trim() : ''
 					teks += `  Total : ${groupMembers.length}\n`
 					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
+						teks += `⇝⤐ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 *MENCIONANDO A TODOS* 〙###'+teks+'╚═〘 _*by dar*_ 〙', members_id, true)
+					mentions('╔══✪〘 *MENCIONANDO A TODOS* 〙###'+teks+'⇝〘 _*by dar*_ 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
