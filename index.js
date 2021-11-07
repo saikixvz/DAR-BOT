@@ -1009,7 +1009,7 @@ break
 		                         client.sendMessage(from, 'https://www.xnxx.com/\n\nhttps://www.xnxx.com/video-ny6hh8e/emily_willis_hace_su_debut_en_pervcity_en_una_nueva_escena_anal_caliente_con_bill_bailey_recibiendo_una_polla_y_bolas_en_su_ojete\n\nListo pajin',MessageType.text, { quoted: mek} )
 					 break
 					
-					 case 'trap':
+					case 'trap':
 		                         client.sendMessage(from, 'A continuacion playlist de trap:\n\nhttps://open.spotify.com/playlist/37i9dQZF1DZ06evO1nGHQ7?si=3620698598ff4c51\nhttps://open.spotify.com/playlist/37i9dQZF1DXde9tuMHuIsj?si=b622ff6770864492',MessageType.text, { quoted: mek} )
 					 break
 					
@@ -1018,7 +1018,16 @@ break
 					 break*/
 					
 /******LINKS DARLYN KKKK******/					
-	
+/***********INSTALACION DEL BOT******/
+					
+					
+case 'instalacion':
+    case 'install':
+        case 'installbot
+        case 'instalar':
+    client.sendMessage(from, `Aqui tienes los comandos de instalacion\n\nPara ello necesitas instalar termux, que lo encuentras en la play store o mas recomendando es decargarlo de F-Droid y digitar los siguientes comandos\n\n1- termux-change-repo\n\nBajas con flecha que te aparece en las herramientas de termux (⇵) y seleccionas los 3 cuadros con la tecla espacio y le das a aceptar con la tecla enter que esta en tu teclado *↲*\n\nTe saldra una ventana y seleccionas el tercer cuadro y seleccionas con la tecla ya mencionada *↲*\n\nDigitas\npkg install git\nTe saldra un mensaje y digitas "y" y enter "↲"\n\npkg install fmmpeg\nY haces lo mismo que hciste con el anterior comando\n\npkg install nodejs\nY haces lo mismo que hciste con el anterior comando\n\npkg install wget\nY haces lo mismo que hciste con el anterior comando\n\nDespues de hacer todo eso vamos a clonar el repositorio, para ello usaremos\n\ngit clone https://github.com/darlyn1234/DAR-BOT\n\Y haces lo mismo que con los otros comandos, despues digitas\n\ncd DAR-BOT\nUna vez abierto el directorio digitas\n\nbash install.sh\mY le das en "y" a todo y finalizar le das a\n\nnpm start\nY escaneas ell codigo a travez de whatsapp web`)
+    break 					
+/********INSTALACION DEL BOT*******/					
 	
 	case 'x':
                 client.updatePresence(from, Presence.composing) 
