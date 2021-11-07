@@ -997,7 +997,7 @@ break
 					 break
 					
 /******LINKS DARLYN KKKK******/
-                                         case 'sexo':
+                                         /*case 'sexo':
 		                         client.sendMessage(from, 'Aqui te dejoo links pajin\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5fb5740bdb24c\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph611676223d5fe\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5dc5899df25a6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph59ff1d784abe7\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591c49b831236\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5db7555de5bd9\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph60002d6c978c6\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph591ae4fc32014\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5c3d1914a7665\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5df121bedb172\n\nhttps://es.pornhub.com/view_video.php?viewkey=ph5e551fecd175b',MessageType.text, { quoted: mek} )
 					 break
 
@@ -1015,7 +1015,7 @@ break
 					
 					 case 'kpop':
 		                         client.sendMessage(from, 'Aquí tienes playlist de kpop\n\O',MessageType.text, { quoted: mek} )
-					 break
+					 break*/
 					
 /******LINKS DARLYN KKKK******/					
 	
