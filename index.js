@@ -1023,10 +1023,10 @@ break
 					
 /*case 'instalacion':
     case 'install':
-        case 'installbot
-        case 'instalar':
-    client.sendMessage(from, `Aqui tienes los comandos de instalacion\n\nPara ello necesitas instalar termux, que lo encuentras en la play store o mas recomendando es decargarlo de F-Droid y digitar los siguientes comandos\n\n1- termux-change-repo\n\nBajas con flecha que te aparece en las herramientas de termux (⇵) y seleccionas los 3 cuadros con la tecla espacio y le das a aceptar con la tecla enter que esta en tu teclado *↲*\n\nTe saldra una ventana y seleccionas el tercer cuadro y seleccionas con la tecla ya mencionada *↲*\n\nDigitas\npkg install git\nTe saldra un mensaje y digitas "y" y enter "↲"\n\npkg install fmmpeg\nY haces lo mismo que hciste con el anterior comando\n\npkg install nodejs\nY haces lo mismo que hciste con el anterior comando\n\npkg install wget\nY haces lo mismo que hciste con el anterior comando\n\nDespues de hacer todo eso vamos a clonar el repositorio, para ello usaremos\n\ngit clone https://github.com/darlyn1234/DAR-BOT\n\Y haces lo mismo que con los otros comandos, despues digitas\n\ncd DAR-BOT\nUna vez abierto el directorio digitas\n\nbash install.sh\mY le das en "y" a todo y finalizar le das a\n\nnpm start\nY escaneas ell codigo a travez de whatsapp web`)
-    break*/ 					
+	case 'installbot':
+          case 'instalar':
+    client.sendMessage(from, `Aqui tienes los comandos de instalacion\n\nPara ello necesitas instalar termux, que lo encuentras en la play store o mas recomendando es decargarlo de F-Droid y digitar los siguientes comandos\n\n1- termux-change-repo\n\nBajas con flecha que te aparece en las herramientas de termux *⇵* y seleccionas los 3 cuadros con la tecla espacio y le das a aceptar con la tecla enter que esta en tu teclado *↲*\n\nTe saldra una ventana y seleccionas el tercer cuadro y seleccionas con la tecla ya mencionada *↲*\n\nDigitas\npkg install git\nTe saldra un mensaje y digitas *y* y enter *↲*\n\npkg install fmmpeg\nY haces lo mismo que hciste con el anterior comando\n\npkg install nodejs\nY haces lo mismo que hciste con el anterior comando\n\npkg install wget\nY haces lo mismo que hciste con el anterior comando\n\nDespues de hacer todo eso vamos a clonar el repositorio, para ello usaremos\n\ngit clone https://github.com/darlyn1234/DAR-BOT\n\Y haces lo mismo que con los otros comandos, despues digitas\n\ncd DAR-BOT\nUna vez abierto el directorio digitas\n\nbash install.sh\mY le das en *y* a todo y finalizar le das a\n\nnpm start\nY escaneas ell codigo a travez de whatsapp web`)
+    break*/					
 /********INSTALACION DEL BOT*******/					
 	
 	case 'x':
