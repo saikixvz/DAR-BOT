@@ -46,25 +46,19 @@ Una vez hecho eso vas a colorcar en termux los siguientes comandos
 ```
 
 Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actualizacion de tu bot
-
-## Se te desplegara una venta y harás lo que esta en el video de abajo
-
-![Output sample](https://github.com/shanduy/ShanBot/blob/main/temples/116244521-ad43a780-a770-11eb-88c6-054fb1950bfd%20(1).gif)
-
-
-
-### OH
-
-```bash
-Hola!!
-```
-
+### INSTALAR EL BOT 
 ## Primero Configurar termux
 Una vez descargado termux colocas el siguiente comando
 
 ```bash
 > termux-change-repo
 ```
+
+## Se te desplegara una venta y harás lo que esta en el video de abajo
+
+![Output sample](https://github.com/shanduy/ShanBot/blob/main/temples/116244521-ad43a780-a770-11eb-88c6-054fb1950bfd%20(1).gif)
+
+
 ## Instalar El Bot
 Pasos para instalar el bot en termux
 
