@@ -4,9 +4,17 @@
 </p>
 
 ## ACTUALIZAR EL BOT
+```bash
+> ctrl + z 
+> git clone https://github.com/darlyn1234/DAR-BOT
+> npm start
+```
+### OH
 
-
+```bash
 Hola!!
+```
+
 ## Primero Configurar termux
 Una vez descargado termux colocas el siguiente comando
 
@@ -29,7 +37,6 @@ Pasos para instalar el bot en termux
 ```
 
 ## NUNCA CIERRES LA SESION DE WHATSAPP WEB MAMAGUEVAZO
-
 
 ## Soluciones A Errores
 Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos
