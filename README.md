@@ -5,10 +5,13 @@
 
 ## ACTUALIZAR EL BOT
 ```bash
-> ctrl + z 
+> ctrl + z  
 > git clone https://github.com/darlyn1234/DAR-BOT
+> cd DAR-BOT
 > npm start
 ```
+Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actualizacion de tu bot
+
 ### OH
 
 ```bash
