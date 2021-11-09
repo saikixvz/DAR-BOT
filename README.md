@@ -1,4 +1,5 @@
 # DAR-BOT
+###### Bot para whatsapp, a continuacion tenes lo pasos para la instalacion #########
 <p align="center">
 <img src="https://github.com/darlyn1234/DAR-BOT/blob/main/src/stickers/lq%20idols%20on%20Twitter.jpg" alt="jpg" width="600" height="600"/>
 </p>
@@ -19,7 +20,7 @@
   <a name=hendra759&label=VIEWS&style=flat-square&color=orange" />
 
 <p align="center">
-Mis redes sociales y mi Whatsapp.
+###### Mis redes sociales y mi Whatsapp. ######
 </p>
 
 <p align='center'>
@@ -27,28 +28,29 @@ Mis redes sociales y mi Whatsapp.
    <a href="https://wa.me/51956570030"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/d9d97d48264770f85d35c208f279152c.png?raw=true"></a>
 </P>
 
-# Dar-Bot
-ULTIMA VERSION 5.0
+# DAR-BOT
+###### ULTIMA VERSION 6.0 ######
 
-## Como Actualizar Tu Bot 🔄
-Para eso vas a cerrar sesión de whatsapp wed en el numero de tu bot y en termux vas a apagar el bot con el comando
+## Como Actualizar Tu Bot
+###### Para eso vas a cerrar sesión de whatsapp wed en el numero de tu bot y en termux vas a apagar el bot con el comando ######
 
 ```bash
 > CTRL y aplastas Z en tu teclado
 ```
 
-Una vez hecho eso vas a colorcar en termux los siguientes comandos
+###### Una vez hecho eso vas a colorcar en termux los siguientes comandos ######
 
 ```bash
-> git clone https://github.com/shanduy/ShanBot
-> cd ShanBot
+> git clone https://github.com/darlyn1234/DAR-BOT
+> cd DAR-BOT
 > npm start
 ```
 
-Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actualizacion de tu bot
+###### Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actualizacion de tu bot ######
+
 ### INSTALAR EL BOT 
 ## Primero Configurar termux
-Una vez descargado termux colocas el siguiente comando
+##### Una vez descargado termux colocas el siguiente comando #####
 
 ```bash
 > termux-change-repo
@@ -60,7 +62,7 @@ Una vez descargado termux colocas el siguiente comando
 
 
 ## Instalar El Bot
-Pasos para instalar el bot en termux
+###### Pasos para instalar el bot en termux #######
 
 ```bash
 > pkg install git
@@ -77,7 +79,7 @@ Pasos para instalar el bot en termux
 ## NUNCA CIERRES LA SESION DE WHATSAPP WEB MAMAGUEVAZO
 
 ## Soluciones A Errores
-Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos
+###### Si despues que ya instalastes tu bot y termux te salta en blanco, se fue tu internet o reiniciaste tu celular, solo realizaras estos pasos ######
 
 ```bash
 > cd DAR-BOT
