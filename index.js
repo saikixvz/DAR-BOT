@@ -265,11 +265,8 @@ async function starts() {
 				teks += `▢ Presentate Con:\n`
 				teks += `▢Foto ▢Nombre ▢Edad ▢País\n`
 				teks += `▢ Respeta las reglas\n`
-				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`
-				 welcomeBut = [{buttonId:`getdeskgc`,buttonText:{displayText:'DESCRIPCION'},type:1}]
-                welcomeButt = { contentText: ` `, footerText: `${teks}`, buttons: welcomeBut, headerType: 6, locationMessage: bosco2.message.locationMessage}
-                client.sendMessage(mdata.id, welcomeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
-                 }   
+				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`\
+				teks += `Hola oe\n`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
