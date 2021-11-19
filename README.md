@@ -20,11 +20,15 @@
   <a name=hendra759&label=VIEWS&style=flat-square&color=orange" />
 
 <p align="center">
-###### Mis redes sociales y mi Whatsapp. ######
 </p>
-
+<p align="center">
+<a href="##"><img title="Bot-By-Confu" src="https://img.shields.io/static/v1?label=Lenguaje&message=Espa%C3%B1ol&color=purple"></a>
+</p>
+<p align="center">
+<a href="#"><img title="DAR-BOT" src="https://img.shields.io/static/v1?label=WhatsApp&message=Bot&color=red"></a>
+</p>
+                                                                                                              
 <p align='center'>
-   <a href="https://www.youtube.com/watch?v=2LQSzEbpJ-M"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/youtube-logo-6-2.png?raw=true"></a>&nbsp;&nbsp;
    <a href="https://wa.me/51956570030"><img height="30" src="https://github.com/shanduy/ShanBot/blob/main/temples/d9d97d48264770f85d35c208f279152c.png?raw=true"></a>
 </P>
 
@@ -85,11 +89,4 @@
 > cd DAR-BOT
 > npm start
 ```
-
-```bash
-> Pene? sexo? Relaciones sexuales?????????
-```
-
-```bash
-> a
-```
+##### Gracias 
