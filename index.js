@@ -71,7 +71,7 @@ const { verdad } = require('./src/verdad')
 /******CARGA DE ENTRADA VCARD******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
-            + 'FN:Dar\n' // Nombre
+            + 'FN:८ 📺 🍂≛ 𝖽𐐼𝗋𝗹yᥒ 𔐬 ☆\n' // Nombre
             + 'ORG:Darlyn;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=51956570030:+51 956 570 030\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
@@ -358,7 +358,7 @@ async function starts() {
                                 levelon: '*Level activado*',
 				leveloff: '*Level desactivado*',
 				foto: 'Estoy cambiando la foto del grupo',
-				unir: 'Estoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*\n\n_*by shanduy*_',
+				unir: 'Estoy tratando de unirlo\n\n*Recuerda, si no lo uno es por que el usuario tiene bloqueado la funcion para unirlo a grupos*',
                                 levelnoton: '*Level no esta activado*',
 				levelnol: '*Nivel* 0 ',
 				error: {
@@ -370,7 +370,7 @@ async function starts() {
 				only: {
 					group: 'Este comando es solo para grupos',
 					ownerG: 'Este comando solo puede ser utilizado por un admins del grupo',
-					ownerB: 'Este comando solo lo usa ☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎',
+					ownerB: 'Este comando solo lo usa ८ 📺 🍂≛ 𝖽𐐼𝗋𝗹yᥒ 𔐬 ☆',
 					admin: 'Este comando solo puede ser utilizado por administradores del grupo',
 					Badmin: 'Este comando solo se puede usar cuando el bot se convierte en administrador',
                                         pegatina: 'Estoy haciendo tu sticker, los stickersgif son de 6 segundos',
@@ -382,7 +382,7 @@ async function starts() {
 					insta: 'Estoy descargando tu post',
 					musica: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion',
 					musica2: 'Estoy bucando tu canción\n\n*Recuerda colocar bien el nombre de la cancion',
-					daftarB: '「NO ESTAS REGISTRADO」\n\nPara usar los comandos primero Registrate \n\n┌─⊷ *REGISTRO* ⊶\n▢ Escribe  ${prefix}daftar y tu nombre \n▢ Ejemplo: /daftar Darlyn\n└─────────────',
+					daftarB: '「NO ESTAS REGISTRADO」\n\nPara usar los comandos primero Registrate \n\n┌─⊷ *REGISTRO* ⊶\n▢ Escribe  /daftar y tu nombre \n▢ Ejemplo: /daftar Darlyn\n└─────────────',
 				}
 			}
     			const apakah = ['Si','No']
