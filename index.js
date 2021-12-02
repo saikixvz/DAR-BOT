@@ -265,8 +265,10 @@ async function starts() {
 				teks += `▢ Presentate Con:\n`
 				teks += `▢Foto ▢Nombre ▢Edad ▢País\n`
 				teks += `▢ Respeta las reglas\n`
+				teks += `▢ *Hora:* ${time}\n\n`
+				teks += `▢ ▢ Fecha: ${date}\n`
+				teks += `▢ ...\n`
 				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`\
-				teks += `Hola oe\n`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -276,7 +278,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i.ibb.co/2ZHZCH4/bienvenida-Siarabotby-Drevill.jpg'
 				}
-				teks = `Bueno...Un pendejo menos @${num.split('@')[0]}`
+				teks = `Se fue...en que estabamos? @${num.split('@')[0]}`
 				 let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'promote') {
@@ -1185,7 +1187,7 @@ case 'hd':
 						teks += `⇝⤐ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('⸕ *MENCIONANDO A TODOS* ⸔###'+teks+'⇝↱ _*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*_ ↲', members_id, true)
+					mentions('⸕ *MENCIONANDO A TODOS* ⸔'+teks+'⇝↱ _*☂︎𝓓𝓪𝓻𝓵𝔂𝓷☂︎*_ ↲', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1410,7 +1412,7 @@ client.groupLeave (from)
 }, 2000)
 setTimeout( () => {
 client.updatePresence(from, Presence.composing) 
-client.sendMessage(from, 'NO VEMOS MAMAGUEVAZOS', text) // ur cods
+client.sendMessage(from, 'NO VEMOS MAMAGUEVAZOS😡🏑', text) // ur cods
 }, 0)
 break
        
@@ -1422,8 +1424,7 @@ contextInfo: { mentionedJid: [from] }
 }
 client.sendMessage(from, options, text, { quoted: mek } )
 break
-					
-					case 'leave':
+
 case 'vete':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1529,12 +1530,12 @@ if (!isGroup) return reply(mess.only.group)
 if (!isUser) return reply(mess.only.daftarB)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 linkgc = await client.groupInviteCode (from)
-yeh = `Aqui esta el link del grupo\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
+yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink de *${groupName}*`
 client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 break
 
 case 'closegc':
-				case 'cerrar':
+case 'cerrar':
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1549,7 +1550,7 @@ reply(close)
 break
                 
 case 'opengc':  
-				case 'abrir':
+case 'abrir':
 client.updatePresence(from, Presence.composing) 
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1587,21 +1588,21 @@ reply('*⌊✅⌉ El cambio de foto del grupo fue exitoso*')
 break						
 				
 case 'ngc':
-				case 'name':
-      if (!isGroup) return reply(mess.only.group)
-      if (!isGroupAdmins) return reply(mess.only.admin)
-      if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-      client.groupUpdateSubject(from, `${body.slice(5)}`)
-      client.sendMessage(from, '*⌊✅⌉ El nombre del grupo fue cambiado*', text, {quoted: mek})
-      break
+case 'name':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+client.groupUpdateSubject(from, `${body.slice(5)}`)
+client.sendMessage(from, '*⌊✅⌉ El nombre del grupo fue cambiado*', text, {quoted: mek})
+break
 
 case 'dgc':
-      if (!isGroup) return reply(mess.only.group)
-      if (!isGroupAdmins) return reply(mess.only.admin)
-      if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-      client.groupUpdateDescription(from, `${body.slice(5)}`)
-      client.sendMessage(from, '*⌊✅⌉ La descripción del grupo fue cambiado*', text, {quoted: mek})
-      break
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+client.groupUpdateDescription(from, `${body.slice(5)}`)
+client.sendMessage(from, '*⌊✅⌉ La descripción del grupo fue cambiado*', text, {quoted: mek})
+ break
 
 case 'welcome':
 if (!isGroup) return reply(mess.only.group)
@@ -1631,7 +1632,7 @@ client.close()
 break					
 					
 case 'restaurar':
-if (!isOwner) return reply('Tu no eres el jefe para darme ordenesr!🤔')
+if (!isOwner) return reply('Tu no eres el jefe para darme ordenesr!!')
 if (!isOwner) return reply('*LA INFORMACION DE ESTE USUARIO SE RESTABLECERA PARA PODER USAR Y ESCANEAR EL CODIGO EN OTRO DISPOSITIVO*')
 exec(`bash restore.sh`, (err, stdout) => {
 if (err) return reply(err)
@@ -1658,14 +1659,12 @@ break
 //CREACION DE STICKERS Y VARIOS				
 				
 				case 's':
-				case 'tucson':
-				case 'opa':
-				case 'shan':
-				case 'nefasto':
 				case 'stiker':
 				case 'sticker':
 				case 'stickergif':
 				case 'stikergif':
+				case 'sofi':
+				case 'dar':
 			        if (!isUser) return reply(mess.only.daftarB)
 				if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1755,7 +1754,7 @@ break
 					ran = getRandom('.png')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
+						if (err) return reply('❗ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Imagen convertida'})
 						fs.unlinkSync(ran)
@@ -1764,14 +1763,14 @@ break
                         case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
                         if (!isUser) return reply(mess.only.daftarB)
-					if (!isQuotedVideo) return reply('❌ Solo videos')
+					if (!isQuotedVideo) return reply('❗ Solo videos')
 					reply(mess.only.mpcancion)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
 					ran = getRandom('.mp4')
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el video a mp3')
+						if (err) return reply('❗ No se pudo convertir el video a mp3')
 						buffer = fs.readFileSync(ran)
 						client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
 						fs.unlinkSync(ran)
@@ -1787,7 +1786,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=20hamilton`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=22hamilton`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1801,7 +1800,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
 	        reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=20hamilton`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=22shanduy`)
                 if (anu.error) return reply(anu.error)
                 infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1836,7 +1835,7 @@ case 'verify':
 case 'registrar':					
 client.updatePresence(from, Presence.composing)
 if (isUser) return reply('Ya estas registrado weon')
-if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar shanduy`)
+if (args.length < 1) return reply(`Incorrecto ❎\nComando: ${prefix}daftar Nombre\n\nEjemplo: ${prefix}daftar darlyn`)
 var reg = body.slice(8)
 var nombre = reg.split("|")[0];
 user.push(sender)
