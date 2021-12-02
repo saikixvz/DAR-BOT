@@ -52,8 +52,11 @@
 
 ###### Te dara un nuevo codigo y lo escaneas con tu numero del bot y ya estara la actualizacion de tu bot ######
 
+
 ### INSTALAR EL BOT 
+
 ## Primero Configurar termux
+
 ##### Una vez descargado termux colocas el siguiente comando #####
 
 ```bash
@@ -65,7 +68,7 @@
 ![Output sample](https://github.com/shanduy/ShanBot/blob/main/temples/116244521-ad43a780-a770-11eb-88c6-054fb1950bfd%20(1).gif)
 
 
-## Instalar El Bot
+## Siguiente
 ###### Pasos para instalar el bot en termux #######
 
 ```bash
@@ -89,4 +92,4 @@
 > cd DAR-BOT
 > npm start
 ```
-##### Gracias 
+##### pene
