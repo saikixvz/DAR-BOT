@@ -268,7 +268,7 @@ async function starts() {
 				teks += `▢ *Hora:* ${time}\n\n`
 				teks += `▢ ▢ Fecha: ${date}\n`
 				teks += `▢ ...\n`
-				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`\
+				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
