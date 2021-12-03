@@ -267,7 +267,14 @@ async function starts() {
 				teks += `▢ Respeta las reglas\n`
 				teks += `▢ *Hora:* ${time}\n\n`
 				teks += `▢ ▢ Fecha: ${date}\n`
-				teks += `▢ ...\n`
+				teks += `▢ 🌿 Hola @${sender.split("@")[0]}🌿
+シ︎ 𝐆𝐫𝐮𝐩𝐨 𝐂𝐡𝐚𝐭𝐬 : ${groups.length} 
+㋛︎ 𝐏𝐫𝐢𝐯𝐚𝐝𝐨 𝐂𝐡𝐚𝐭𝐬 : ${privat.length}
+シ︎ 𝐓𝐨𝐭𝐚𝐥 𝐂𝐡𝐚𝐭𝐬 : ${totalChat.length}
+㋛︎ 𝐕𝐞𝐥𝐨𝐜𝐢𝐝𝐚𝐝 : ${latensie.toFixed(4)} _Second_
+シ︎ 𝐀𝐜𝐭𝐢𝐯𝐨 : ${runtime(process.uptime())}
+㋛︎ 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦𝐚 : ${os.platform()}
+${readmore}\n`
 				teks += `└──┨ ☠️Darlyn☠️ ┠──\n`
 				  let buff = await getBuffer(ppimg)
 			client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
